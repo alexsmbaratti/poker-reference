@@ -24,6 +24,8 @@ struct QuickReferenceView: View {
                 HandReferenceView(name: "Flush", description: "Five cards of the same suit, but not in sequence", cards: [Card(rank: .king, suit: .club), Card(rank: .seven, suit: .club), Card(rank: .five, suit: .club), Card(rank: .three, suit: .club), Card(rank: .two, suit: .club)])
 //                Divider()
                 HandReferenceView(name: "Straight", description: "Five cards of different suits in sequence", cards: [Card(rank: .jack, suit: .club), Card(rank: .ten, suit: .diamond), Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .heart), Card(rank: .seven, suit: .club)])
+//                Divider()
+                HandReferenceView(name: "3 Of A Kind", description: "Three cards of the same rank, plus two unmatched cards", cards: [Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .nine, suit: .spade), Card(rank: .two, suit: .heart)])
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing, content: {
@@ -96,19 +98,30 @@ struct CardView: View {
                 .shadow(radius: 5)
             HStack {
                 VStack {
-                    Text(card.rank.symbol)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                    Image(systemName: card.suit.symbol)
-                        .foregroundColor(card.suit.color)
+                    label
                     Spacer()
                 }
                 .dynamicTypeSize(.medium)
                 Spacer()
+                VStack {
+                    label
+                    Spacer()
+                }
+                .rotationEffect(.degrees(180))
             }
             .padding(.all, 3.0)
         }
         .frame(width: 70, height: 100)
+    }
+    
+    var label: some View {
+        VStack {
+            Text(card.rank.symbol)
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+            Image(systemName: card.suit.symbol)
+                .foregroundColor(card.suit.color)
+        }
     }
 }
 

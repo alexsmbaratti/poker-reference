@@ -84,3 +84,116 @@ enum Rank: Int, CaseIterable {
         }
     }
 }
+
+enum Hand: Int, CaseIterable {
+    case royal_flush = 9
+    case straight_flush = 8
+    case four_of_a_kind = 7
+    case full_house = 6
+    case flush = 5
+    case straight = 4
+    case three_of_a_kind = 3
+    case two_pair = 2
+    case one_pair = 1
+    case high_card = 0
+    
+    var name: String {
+        switch self {
+        case .royal_flush:
+            return "Royal Flush"
+        case .straight_flush:
+            return "Straight Flush"
+        case .four_of_a_kind:
+            return "Four Of A Kind"
+        case .full_house:
+            return "Full House"
+        case .flush:
+            return "Flush"
+        case .straight:
+            return "Straight"
+        case .three_of_a_kind:
+            return "Three Of A Kind"
+        case .two_pair:
+            return "2 Pair"
+        case .one_pair:
+            return "1 Pair"
+        case .high_card:
+            return "High Card"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .royal_flush:
+            return "Five cards of the same suit in sequence"
+        case .straight_flush:
+            return "Five cards of the same suit in sequence"
+        case .four_of_a_kind:
+            return "Four cards of the same rank"
+        case .full_house:
+            return "Three matching cards of one rank, with two matching cards of another"
+        case .flush:
+            return "Five cards of the same suit, but not in sequence"
+        case .straight:
+            return "Five cards of different suits in sequence"
+        case .three_of_a_kind:
+            return "Three cards of the same rank"
+        case .two_pair:
+            return "Two cards of the same rank, and two cards of another rank"
+        case .one_pair:
+            return "Two cards of the same rank"
+        case .high_card:
+            return "The card with the highest rank in your hand"
+        }
+    }
+    
+    var exampleHand: [Card] {
+        switch self {
+        case .royal_flush:
+            return [Card(rank: .ace, suit: .heart), Card(rank: .king, suit: .heart), Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart)]
+        case .straight_flush:
+            return [Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .spade), Card(rank: .seven, suit: .spade), Card(rank: .six, suit: .spade), Card(rank: .five, suit: .spade)]
+        case .four_of_a_kind:
+            return [Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .seven, suit: .spade), Card(rank: .two, suit: .heart)]
+        case .full_house:
+            return [Card(rank: .queen, suit: .heart), Card(rank: .queen, suit: .spade), Card(rank: .queen, suit: .diamond), Card(rank: .ace, suit: .club), Card(rank: .ace, suit: .heart)]
+        case .flush:
+            return [Card(rank: .king, suit: .club), Card(rank: .seven, suit: .club), Card(rank: .five, suit: .club), Card(rank: .three, suit: .club), Card(rank: .two, suit: .club)]
+        case .straight:
+            return [Card(rank: .jack, suit: .club), Card(rank: .ten, suit: .diamond), Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .heart), Card(rank: .seven, suit: .club)]
+        case .three_of_a_kind:
+            return [Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .nine, suit: .spade), Card(rank: .two, suit: .heart)]
+        case .two_pair:
+            return [Card(rank: .ten, suit: .diamond), Card(rank: .ten, suit: .club), Card(rank: .five, suit: .heart), Card(rank: .five, suit: .spade), Card(rank: .three, suit: .heart)]
+        case .one_pair:
+            return [Card(rank: .two, suit: .diamond), Card(rank: .two, suit: .club), Card(rank: .six, suit: .heart), Card(rank: .five, suit: .spade), Card(rank: .nine, suit: .heart)]
+        case .high_card:
+            return [Card(rank: .ace, suit: .diamond), Card(rank: .six, suit: .club), Card(rank: .two, suit: .heart), Card(rank: .eight, suit: .spade), Card(rank: .five, suit: .heart)]
+        }
+    }
+    
+    func isHand(cards: [Card]) -> Bool {
+        switch self {
+        case .royal_flush:
+            return false // TODO: Implement
+        case .straight_flush:
+            return false // TODO: Implement
+        case .four_of_a_kind:
+            return false // TODO: Implement
+        case .full_house:
+            return false // TODO: Implement
+        case .flush:
+            return false // TODO: Implement
+        case .straight:
+            return false // TODO: Implement
+        case .three_of_a_kind:
+            return false // TODO: Implement
+        case .two_pair:
+            return false // TODO: Implement
+        case .one_pair:
+            return false // TODO: Implement
+        case .high_card:
+            return true
+        }
+    }
+}

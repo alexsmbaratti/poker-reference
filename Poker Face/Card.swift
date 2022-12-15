@@ -8,6 +8,24 @@
 import Foundation
 import SwiftUI
 
+class CardUtils {
+    static func allOfSameSuit(cards: [Card]) -> Bool {
+        return cards.dropFirst().allSatisfy({ $0.suit == cards.first?.suit })
+    }
+    
+    static func containsRank(rank: Rank, cards: [Card]) -> Bool {
+        return !cards.filter({ $0.rank == rank }).isEmpty
+    }
+    
+    static func containsRanks(ranks: [Rank], cards: [Card]) -> Bool {
+        return ranks.allSatisfy({ self.containsRank(rank: $0, cards: cards) })
+    }
+    
+    static func isFullHand(cards: [Card]) -> Bool {
+        return cards.count == 5
+    }
+}
+
 struct Card: CustomStringConvertible {
     var rank: Rank
     var suit: Suit
@@ -175,7 +193,7 @@ enum Hand: Int, CaseIterable {
     func isHand(cards: [Card]) -> Bool {
         switch self {
         case .royal_flush:
-            return false // TODO: Implement
+            return CardUtils.isFullHand(cards: cards) && CardUtils.allOfSameSuit(cards: cards) && CardUtils.containsRanks(ranks: [.ace, .king, .queen, .jack, .ten], cards: cards)
         case .straight_flush:
             return false // TODO: Implement
         case .four_of_a_kind:

@@ -24,6 +24,30 @@ class CardUtils {
     static func isFullHand(cards: [Card]) -> Bool {
         return cards.count == 5
     }
+    
+    static func isInSequence(cards: [Card]) -> Bool {
+        return false
+    }
+    
+    static func allDistinctRanks(cards: [Card]) -> Bool {
+        return false // TODO
+    }
+    
+    static func isCyclic(cards: [Card]) -> Bool {
+        return self.containsRanks(ranks: [.king, .ace, .two], cards: cards)
+    }
+    
+    static func getHand(cards: [Card]) -> Hand {
+        if (self.isFullHand(cards: cards) && self.allOfSameSuit(cards: cards) && self.containsRanks(ranks: [.ace, .king, .queen, .jack, .ten], cards: cards)) {
+            return .royal_flush
+        } else if (self.isFullHand(cards: cards) && self.allOfSameSuit(cards: cards) && !self.isCyclic(cards: cards) && self.allDistinctRanks(cards: cards) && self.isInSequence(cards: cards)) {
+            return .straight_flush
+        } else if (self.isFullHand(cards: cards) && self.allOfSameSuit(cards: cards)) {
+            return .flush
+        } else {
+            return .high_card
+        }
+    }
 }
 
 struct Card: CustomStringConvertible {
@@ -99,6 +123,68 @@ enum Rank: Int, CaseIterable {
             return "Q"
         case .king:
             return "K"
+        }
+    }
+    
+    var higherRank: Rank {
+        switch self {
+        case .ace:
+            return .two
+        case .two:
+            return .three
+        case .three:
+            return .four
+        case .four:
+            return .five
+        case .five:
+            return .six
+        case .six:
+            return .seven
+        case .seven:
+            return .eight
+        case .eight:
+            return .nine
+        case .nine:
+            return .ten
+        case .ten:
+            return .jack
+        case .jack:
+            return .queen
+        case .queen:
+            return .king
+        case .king:
+            return .ace
+        }
+    }
+    
+    var lowerRank: Rank {
+        switch self {
+        case .ace:
+            return .king
+        case .two:
+            return .ace
+        case .three:
+            return .two
+        case .four:
+            return .three
+        case .five:
+            return .four
+        case .six:
+            return .five
+        case .seven:
+            return .six
+        case .eight:
+            return .seven
+        case .nine:
+            return .eight
+        case .ten:
+            return .nine
+        case .jack:
+            return .ten
+        case .queen:
+            return .jack
+        case .king:
+            return .queen
         }
     }
 }
@@ -187,31 +273,6 @@ enum Hand: Int, CaseIterable {
             return [Card(rank: .two, suit: .diamond), Card(rank: .two, suit: .club), Card(rank: .six, suit: .heart), Card(rank: .five, suit: .spade), Card(rank: .nine, suit: .heart)]
         case .high_card:
             return [Card(rank: .ace, suit: .diamond), Card(rank: .six, suit: .club), Card(rank: .two, suit: .heart), Card(rank: .eight, suit: .spade), Card(rank: .five, suit: .heart)]
-        }
-    }
-    
-    func isHand(cards: [Card]) -> Bool {
-        switch self {
-        case .royal_flush:
-            return CardUtils.isFullHand(cards: cards) && CardUtils.allOfSameSuit(cards: cards) && CardUtils.containsRanks(ranks: [.ace, .king, .queen, .jack, .ten], cards: cards)
-        case .straight_flush:
-            return false // TODO: Implement
-        case .four_of_a_kind:
-            return false // TODO: Implement
-        case .full_house:
-            return false // TODO: Implement
-        case .flush:
-            return false // TODO: Implement
-        case .straight:
-            return false // TODO: Implement
-        case .three_of_a_kind:
-            return false // TODO: Implement
-        case .two_pair:
-            return false // TODO: Implement
-        case .one_pair:
-            return false // TODO: Implement
-        case .high_card:
-            return true
         }
     }
 }

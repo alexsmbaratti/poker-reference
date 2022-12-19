@@ -10,4 +10,10 @@ import Foundation
 struct Game: Identifiable, Hashable {
     var id: UUID = UUID()
     var name: String
+    var wildranks: [Rank] = []
+    var wildcards: [Card] = []
+    
+    func hasWilds() -> Bool {
+        return !wildcards.isEmpty || !wildranks.isEmpty
+    }
 }

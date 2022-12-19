@@ -50,20 +50,30 @@ class CardUtils {
     }
 }
 
-struct Card: CustomStringConvertible {
+struct Card: CustomStringConvertible, Hashable {
     var rank: Rank
     var suit: Suit
+    var side: CardSide = .face_up
     
     var description: String {
         return "\(rank) of \(suit)"
     }
+    
+    var isFaceUp: Bool {
+        return side == .face_up
+    }
 }
 
-enum Suit: String {
-    case club = "Clubs"
-    case diamond = "Diamonds"
-    case heart = "Hearts"
-    case spade = "Spades"
+enum CardSide {
+    case face_down
+    case face_up
+}
+
+enum Suit: CustomStringConvertible {
+    case club
+    case diamond
+    case heart
+    case spade
     
     var symbol: String {
         switch self {
@@ -75,6 +85,19 @@ enum Suit: String {
             return "suit.heart.fill"
         case .spade:
             return "suit.spade.fill"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .club:
+            return "Clubs"
+        case .diamond:
+            return "Diamonds"
+        case .heart:
+            return "Hearts"
+        case .spade:
+            return "Spades"
         }
     }
     
@@ -92,7 +115,7 @@ enum Suit: String {
     }
 }
 
-enum Rank: Int, CaseIterable {
+enum Rank: Int, CaseIterable, CustomStringConvertible {
     case ace = 1, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king
     
     var symbol: String {
@@ -186,6 +209,72 @@ enum Rank: Int, CaseIterable {
         case .king:
             return .queen
         }
+    }
+    
+    var description: String {
+        switch self {
+        case .ace:
+            return "Ace"
+        case .two:
+            return "Two"
+        case .three:
+            return "Three"
+        case .four:
+            return "Four"
+        case .five:
+            return "Five"
+        case .six:
+            return "Six"
+        case .seven:
+            return "Seven"
+        case .eight:
+            return "Eight"
+        case .nine:
+            return "Nine"
+        case .ten:
+            return "Ten"
+        case .jack:
+            return "Jack"
+        case .queen:
+            return "Queen"
+        case .king:
+            return "King"
+        }
+    }
+    
+    var descriptionPlural: String {
+        switch self {
+        case .ace:
+            return "Aces"
+        case .two:
+            return "Twos"
+        case .three:
+            return "Threes"
+        case .four:
+            return "Fours"
+        case .five:
+            return "Fives"
+        case .six:
+            return "Sixes"
+        case .seven:
+            return "Sevens"
+        case .eight:
+            return "Eights"
+        case .nine:
+            return "Nines"
+        case .ten:
+            return "Tens"
+        case .jack:
+            return "Jacks"
+        case .queen:
+            return "Queens"
+        case .king:
+            return "Kings"
+        }
+    }
+    
+    var allSuits: [Card] {
+        return [Card(rank: self, suit: .club), Card(rank: self, suit: .diamond), Card(rank: self, suit: .heart), Card(rank: self, suit: .spade)]
     }
 }
 

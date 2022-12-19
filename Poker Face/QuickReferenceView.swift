@@ -73,7 +73,7 @@ struct CardStackView: View {
             }
         }
         .offset(x: -50)
-        .frame(width: 200, height: 125)
+        .frame(width: CGFloat(cards.count) * 40, height: 125)
     }
 }
 

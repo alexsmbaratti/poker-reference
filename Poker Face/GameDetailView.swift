@@ -116,18 +116,16 @@ struct WildsReferenceView: View {
     var body: some View {
         VStack {
             HStack {
-                HStack {
-                    Text(text)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .multilineTextAlignment(.leading)
-                HStack {
-                    CardStackView(cards: cards)
-                }
+                Text(text)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                CardStackView(cards: cards)
+                    .scaleEffect(0.7)
             }
         }
+        .frame(height: 80)
     }
 }
 
@@ -137,7 +135,7 @@ private struct Heading: View {
     var body: some View {
         HStack {
             Text(text)
-                .font(.title)
+                .font(.title2)
                 .fontWeight(.bold)
             Spacer()
         }

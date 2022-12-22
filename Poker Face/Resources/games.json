@@ -4,7 +4,26 @@
         "name": "Five Card Draw",
         "wildcards": [],
         "wildranks": [],
-        "steps": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt five cards face down"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "Each player may discard any or all of their cards for new ones"
+            },
+            {
+                "description": "Another round of betting occurs"
+            },
+            {
+                "description": "Each player reveals their hand and the player with the best hand wins"
+            }
+        ],
         "variants": []
     },
     {

@@ -26,7 +26,6 @@ struct Game: Identifiable, Hashable, Codable {
 
 struct Instruction: Hashable, Codable {
     var description: String
-    var cards: [Card] = []
 }
 
 struct Variant: Hashable, Codable {

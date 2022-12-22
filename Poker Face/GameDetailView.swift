@@ -18,19 +18,6 @@ struct GameDetailView: View {
             WildcardsView(game: game)
             Heading(text: "How to Play")
             HowToView(steps: game.steps)
-            Heading(text: "Win Condition")
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
-            Button(action: {
-                showQuickReference = true
-            }) {
-                Text("Show Quick Reference")
-                    .fontWeight(.semibold)
-                    .font(.headline)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(.cyan)
-                    .cornerRadius(20)
-            }
             Heading(text: "Variants")
             VariantsView(variants: game.variants)
         }
@@ -39,6 +26,15 @@ struct GameDetailView: View {
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)
         })
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing, content: {
+                Button(action: {
+                    showQuickReference = true
+                }, label: {
+                    Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
+                })
+            })
+        }
     }
 }
 
@@ -233,9 +229,11 @@ struct StepView: View {
             }
             .frame(height: 50)
             Text(step.description)
-                .font(.title2)
-                .multilineTextAlignment(.leading)
+                .font(.title3)
                 .fontWeight(.bold)
+                .fixedSize(horizontal: false, vertical: true)
+                .multilineTextAlignment(.leading)
+                .padding(.leading)
             Spacer()
         }
     }

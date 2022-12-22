@@ -35,7 +35,7 @@ struct ContentView: View {
                     Button(action: {
                         showQuickReference = true
                     }, label: {
-                        Label("Quick Reference", systemImage: "questionmark.circle")
+                        Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
                     })
                 })
             }

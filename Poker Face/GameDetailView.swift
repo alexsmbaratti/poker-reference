@@ -17,7 +17,7 @@ struct GameDetailView: View {
             Heading(text: "Wildcards")
             WildcardsView(game: game)
             Heading(text: "How to Play")
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
+            HowToView(steps: game.steps)
             Heading(text: "Win Condition")
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
             Button(action: {
@@ -32,7 +32,7 @@ struct GameDetailView: View {
                     .cornerRadius(20)
             }
             Heading(text: "Variants")
-            VariantsView(game: game)
+            VariantsView(variants: game.variants)
         }
         .padding(.horizontal)
         .navigationBarTitle(game.name)
@@ -42,13 +42,50 @@ struct GameDetailView: View {
     }
 }
 
-struct VariantsView: View {
-    var game: Game
+struct HowToView: View {
+    var steps: [Instruction]
     
     var body: some View {
-        if game.hasVariants() {
+        if !steps.isEmpty {
             VStack {
-                ForEach(game.variants, id: \.self) { variant in
+                ForEach(0..<steps.count, id: \.self) { index in
+                    StepView(num: index + 1, step: steps[index])
+                }
+            }
+            .padding(.all)
+            .aspectRatio(contentMode: .fit)
+            .background(
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                    .foregroundColor(Color(.systemFill))
+                    .shadow(radius: 7)
+            )
+        } else {
+            HStack {
+                Spacer()
+                Text("No Steps")
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .padding(.all)
+            .aspectRatio(contentMode: .fit)
+            .background(
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                    .foregroundColor(Color(.systemFill))
+                    .shadow(radius: 7)
+            )
+        }
+    }
+}
+
+struct VariantsView: View {
+    var variants: [Variant]
+    
+    var body: some View {
+        if !variants.isEmpty {
+            VStack {
+                ForEach(variants, id: \.self) { variant in
                     VariantView(variant: variant)
                 }
             }
@@ -178,10 +215,36 @@ private struct Heading: View {
     }
 }
 
+struct StepView: View {
+    var num: Int
+    var step: Instruction
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        HStack {
+            ZStack {
+                Circle()
+                    .foregroundColor(colorScheme == .dark ? .black : .gray)
+                Text(String(num))
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            }
+            .frame(height: 50)
+            Text(step.description)
+                .font(.title2)
+                .multilineTextAlignment(.leading)
+                .fontWeight(.bold)
+            Spacer()
+        }
+    }
+}
+
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First"), Instruction(description: "Second")], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
         }
     }
 }

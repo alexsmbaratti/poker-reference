@@ -11,6 +11,8 @@
 		FAB4FB95294ACF0400B7B1D1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
 		FAB4FB99294AE6BE00B7B1D1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB98294AE6BE00B7B1D1 /* Game.swift */; };
 		FAB4FB9B294AE85B00B7B1D1 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
+		FAD893DA2953F46200B3C871 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
+		FAD893DD2953F4A100B3C871 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FAEF319A29467EA100B9F75C /* Poker_FaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */; };
 		FAEF319C29467EA100B9F75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319B29467EA100B9F75C /* ContentView.swift */; };
 		FAEF319E29467EA200B9F75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEF319D29467EA200B9F75C /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		FAB4FB93294ACEE000B7B1D1 /* CardUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtilsTests.swift; sourceTree = "<group>"; };
 		FAB4FB98294AE6BE00B7B1D1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		FAD893D92953F46200B3C871 /* games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = games.json; sourceTree = "<group>"; };
+		FAD893DC2953F4A100B3C871 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		FAEF319629467EA100B9F75C /* Poker Face.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poker_FaceApp.swift; sourceTree = "<group>"; };
 		FAEF319B29467EA100B9F75C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,23 @@
 			path = "Poker FaceTests";
 			sourceTree = "<group>";
 		};
+		FAD893D82953F45700B3C871 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAD893D92953F46200B3C871 /* games.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAD893DB2953F47400B3C871 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4FB98294AE6BE00B7B1D1 /* Game.swift */,
+				FAD893DC2953F4A100B3C871 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FAEF318D29467EA100B9F75C = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +111,11 @@
 		FAEF319829467EA100B9F75C /* Poker Face */ = {
 			isa = PBXGroup;
 			children = (
+				FAD893DB2953F47400B3C871 /* Model */,
+				FAD893D82953F45700B3C871 /* Resources */,
 				FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */,
 				FAEF319B29467EA100B9F75C /* ContentView.swift */,
 				FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */,
-				FAB4FB98294AE6BE00B7B1D1 /* Game.swift */,
 				FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */,
 				FAEF31A929467FCA00B9F75C /* Card.swift */,
 				FAEF319D29467EA200B9F75C /* Assets.xcassets */,
@@ -199,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEF31A129467EA200B9F75C /* Preview Assets.xcassets in Resources */,
+				FAD893DA2953F46200B3C871 /* games.json in Resources */,
 				FAEF319E29467EA200B9F75C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +248,7 @@
 				FAEF319A29467EA100B9F75C /* Poker_FaceApp.swift in Sources */,
 				FAB4FB9B294AE85B00B7B1D1 /* GameDetailView.swift in Sources */,
 				FAEF31AA29467FCA00B9F75C /* Card.swift in Sources */,
+				FAD893DD2953F4A100B3C871 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

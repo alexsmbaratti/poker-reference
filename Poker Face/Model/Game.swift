@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Game: Identifiable, Hashable {
-    var id: UUID = UUID()
+struct Game: Identifiable, Hashable, Codable {
+    var id: Int = 0
     var name: String
     var steps: [Instruction] = []
     var wildranks: [Rank] = []
@@ -19,7 +19,7 @@ struct Game: Identifiable, Hashable {
     }
 }
 
-struct Instruction: Hashable {
+struct Instruction: Hashable, Codable {
     var description: String
     var cards: [Card] = []
 }

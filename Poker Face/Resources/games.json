@@ -1,0 +1,69 @@
+[
+    {
+        "id": 0,
+        "name": "Five Card Draw",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    },
+    {
+        "id": 1,
+        "name": "Baseball",
+        "wildcards": [],
+        "wildranks": [ 3, 9 ],
+        "steps": []
+    },
+    {
+        "id": 2,
+        "name": "Football",
+        "wildcards": [],
+        "wildranks": [ 3 ],
+        "steps": []
+    },
+    {
+        "id": 3,
+        "name": "Screwball",
+        "wildcards": [ {
+            "rank": 13,
+            "suit": 1,
+            "side": 1
+        }],
+        "wildranks": [ 2, 11 ],
+        "steps": []
+    },
+    {
+        "id": 4,
+        "name": "727",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    },
+    {
+        "id": 5,
+        "name": "Low Hole Roll Your Own",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    },
+    {
+        "id": 6,
+        "name": "Follow the Queens",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    },
+    {
+        "id": 7,
+        "name": "Jack the Shifter",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    },
+    {
+        "id": 8,
+        "name": "Twenty-One",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": []
+    }
+]

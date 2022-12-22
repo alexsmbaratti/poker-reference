@@ -11,8 +11,6 @@ struct ContentView: View {
     @State var showQuickReference = false
     @State var path: [Game] = []
     
-    var games = [Game(name: "Five Card Draw"), Game(name: "Baseball", wildranks: [.three, .nine]), Game(name: "Football", wildranks: [.three]), Game(name: "Screwball", wildranks: [.two, .jack], wildcards: [Card(rank: .king, suit: .diamond)]), Game(name: "727"), Game(name: "Low Hole Roll Your Own"), Game(name: "Follow the Queens"), Game(name: "Jack the Shifter"), Game(name: "Twenty-One")]
-    
     var body: some View {
         NavigationStack {
             VStack {

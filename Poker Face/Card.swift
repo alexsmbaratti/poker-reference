@@ -50,7 +50,7 @@ class CardUtils {
     }
 }
 
-struct Card: CustomStringConvertible, Hashable {
+struct Card: CustomStringConvertible, Hashable, Codable {
     var rank: Rank
     var suit: Suit
     var side: CardSide = .face_up
@@ -64,16 +64,16 @@ struct Card: CustomStringConvertible, Hashable {
     }
 }
 
-enum CardSide {
-    case face_down
-    case face_up
+enum CardSide: Int, Codable {
+    case face_down = 0
+    case face_up = 1
 }
 
-enum Suit: CustomStringConvertible {
-    case club
-    case diamond
-    case heart
-    case spade
+enum Suit: Int, CustomStringConvertible, Codable {
+    case club = 0
+    case diamond = 1
+    case heart = 2
+    case spade = 3
     
     var symbol: String {
         switch self {
@@ -115,7 +115,7 @@ enum Suit: CustomStringConvertible {
     }
 }
 
-enum Rank: Int, CaseIterable, CustomStringConvertible {
+enum Rank: Int, CaseIterable, CustomStringConvertible, Codable {
     case ace = 1, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king
     
     var symbol: String {

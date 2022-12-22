@@ -4,21 +4,24 @@
         "name": "Five Card Draw",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 1,
         "name": "Baseball",
         "wildcards": [],
         "wildranks": [ 3, 9 ],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 2,
         "name": "Football",
         "wildcards": [],
         "wildranks": [ 3 ],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 3,
@@ -29,41 +32,47 @@
             "side": 1
         }],
         "wildranks": [ 2, 11 ],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 4,
         "name": "727",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 5,
         "name": "Low Hole Roll Your Own",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 6,
         "name": "Follow the Queens",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 7,
         "name": "Jack the Shifter",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     },
     {
         "id": 8,
         "name": "Twenty-One",
         "wildcards": [],
         "wildranks": [],
-        "steps": []
+        "steps": [],
+        "variants": []
     }
 ]

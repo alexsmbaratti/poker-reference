@@ -32,13 +32,50 @@ struct GameDetailView: View {
                     .cornerRadius(20)
             }
             Heading(text: "Variants")
-            VariantView(name: "Midnight", description: "Text")
+            VariantsView(game: game)
         }
         .padding(.horizontal)
         .navigationBarTitle(game.name)
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)
         })
+    }
+}
+
+struct VariantsView: View {
+    var game: Game
+    
+    var body: some View {
+        if game.hasVariants() {
+            VStack {
+                ForEach(game.variants, id: \.self) { variant in
+                    VariantView(variant: variant)
+                }
+            }
+            .padding(.all)
+            .aspectRatio(contentMode: .fit)
+            .background(
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                    .foregroundColor(Color(.systemFill))
+                    .shadow(radius: 7)
+            )
+        } else {
+            HStack {
+                Spacer()
+                Text("No Variants")
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .padding(.all)
+            .aspectRatio(contentMode: .fit)
+            .background(
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                    .foregroundColor(Color(.systemFill))
+                    .shadow(radius: 7)
+            )
+        }
     }
 }
 
@@ -85,18 +122,17 @@ struct WildcardsView: View {
 }
 
 struct VariantView: View {
-    var name: String
-    var description: String
+    var variant: Variant
     
     var body: some View {
         VStack {
             HStack {
-                Text(name)
+                Text(variant.name)
                     .font(.title2)
                     .fontWeight(.bold)
                 Spacer()
             }
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
+            Text(variant.description)
                 .multilineTextAlignment(.leading)
         }
         .padding(.all)

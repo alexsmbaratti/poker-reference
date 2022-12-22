@@ -14,10 +14,10 @@ struct GameDetailView: View {
     
     var body: some View {
         ScrollView {
-            Heading(text: "How to Play")
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
             Heading(text: "Wildcards")
             WildcardsView(game: game)
+            Heading(text: "How to Play")
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
             Heading(text: "Win Condition")
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper orci sit amet euismod accumsan. Proin mi urna, ultrices in elementum porttitor, blandit sit amet turpis.")
             Button(action: {

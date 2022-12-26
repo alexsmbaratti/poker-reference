@@ -6,16 +6,17 @@
         "wildranks": [],
         "steps": [
             {
-                "description": "Pay the ante"
+                "description": "Pay the ante",
             },
             {
-                "description": "All players are dealt five cards face down"
+                "description": "All players are dealt five cards face down",
+                "subtext": "You may view your hand."
             },
             {
                 "description": "A round of betting occurs"
             },
             {
-                "description": "Each player may discard any or all of their cards for new ones"
+                "description": "Each player may discard up to four of their cards for new ones"
             },
             {
                 "description": "Another round of betting occurs"
@@ -31,7 +32,14 @@
         "name": "Baseball",
         "wildcards": [],
         "wildranks": [ 3, 9 ],
-        "steps": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt two cards, one face down and one face up"
+            }
+        ],
         "variants": []
     },
     {

@@ -228,12 +228,20 @@ struct StepView: View {
                     .foregroundColor(.white)
             }
             .frame(height: 50)
-            Text(step.description)
-                .font(.title3)
-                .fontWeight(.bold)
-                .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.leading)
-                .padding(.leading)
+            VStack {
+                Text(step.description)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+                if step.subtext != nil {
+                    Text(step.subtext!)
+                        .font(.caption)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.leading)
+                }
+            }
+            .padding(.leading)
             Spacer()
         }
     }
@@ -242,7 +250,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First"), Instruction(description: "Second")], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second")], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
         }
     }
 }

@@ -26,6 +26,7 @@ struct Game: Identifiable, Hashable, Codable {
 
 struct Instruction: Hashable, Codable {
     var description: String
+    var subtext: String?
 }
 
 struct Variant: Hashable, Codable {

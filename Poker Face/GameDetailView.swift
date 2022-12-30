@@ -229,16 +229,22 @@ struct StepView: View {
             }
             .frame(height: 50)
             VStack {
-                Text(step.description)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .multilineTextAlignment(.leading)
-                if step.subtext != nil {
-                    Text(step.subtext!)
-                        .font(.caption)
+                HStack {
+                    Text(step.description)
+                        .font(.title3)
+                        .fontWeight(.bold)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                if step.subtext != nil {
+                    HStack {
+                        Text(step.subtext!)
+                            .font(.caption)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
                 }
             }
             .padding(.leading)

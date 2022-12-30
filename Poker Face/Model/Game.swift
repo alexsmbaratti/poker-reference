@@ -29,6 +29,11 @@ struct Instruction: Hashable, Codable {
     var subtext: String?
 }
 
+enum InstructionType: Int, Codable {
+    case generic
+    case ante_pay
+}
+
 struct Variant: Hashable, Codable {
     var name: String
     var description: String

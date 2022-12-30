@@ -37,7 +37,8 @@
                 "description": "Pay the ante"
             },
             {
-                "description": "All players are dealt two cards, one face down and one face up"
+                "description": "All players are dealt two cards, two face down and one face up",
+                "subtext": "You may view your hand."
             }
         ],
         "variants": []

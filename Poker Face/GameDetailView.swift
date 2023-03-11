@@ -14,14 +14,16 @@ struct GameDetailView: View {
     
     var body: some View {
         ScrollView {
-            Heading(text: "Wildcards")
-            WildcardsView(game: game)
-            Heading(text: "How to Play")
-            HowToView(steps: game.steps)
-            Heading(text: "Variants")
-            VariantsView(variants: game.variants)
+            Group {
+                Heading(text: "Wildcards")
+                WildcardsView(game: game)
+                Heading(text: "How to Play")
+                HowToView(steps: game.steps)
+                Heading(text: "Variants")
+                VariantsView(variants: game.variants)
+            }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
         .navigationBarTitle(game.name)
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)

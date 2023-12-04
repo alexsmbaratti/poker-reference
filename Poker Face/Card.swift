@@ -347,7 +347,7 @@ enum Hand: Int, CaseIterable {
         case .straight_flush:
             return [Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .spade), Card(rank: .seven, suit: .spade), Card(rank: .six, suit: .spade), Card(rank: .five, suit: .spade)]
         case .four_of_a_kind:
-            return [Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .seven, suit: .spade), Card(rank: .two, suit: .heart)]
+            return [Card(rank: .two, suit: .heart, side: .face_down), Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .seven, suit: .spade)]
         case .full_house:
             return [Card(rank: .queen, suit: .heart), Card(rank: .queen, suit: .spade), Card(rank: .queen, suit: .diamond), Card(rank: .ace, suit: .club), Card(rank: .ace, suit: .heart)]
         case .flush:
@@ -355,13 +355,13 @@ enum Hand: Int, CaseIterable {
         case .straight:
             return [Card(rank: .jack, suit: .club), Card(rank: .ten, suit: .diamond), Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .heart), Card(rank: .seven, suit: .club)]
         case .three_of_a_kind:
-            return [Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart), Card(rank: .nine, suit: .spade), Card(rank: .two, suit: .heart)]
+            return [Card(rank: .nine, suit: .spade, side: .face_down), Card(rank: .two, suit: .heart, side: .face_down), Card(rank: .seven, suit: .diamond), Card(rank: .seven, suit: .club), Card(rank: .seven, suit: .heart)]
         case .two_pair:
-            return [Card(rank: .ten, suit: .diamond), Card(rank: .ten, suit: .club), Card(rank: .five, suit: .heart), Card(rank: .five, suit: .spade), Card(rank: .three, suit: .heart)]
+            return [Card(rank: .three, suit: .heart, side: .face_down), Card(rank: .ten, suit: .diamond), Card(rank: .ten, suit: .club), Card(rank: .five, suit: .heart), Card(rank: .five, suit: .spade)]
         case .one_pair:
-            return [Card(rank: .two, suit: .diamond), Card(rank: .two, suit: .club), Card(rank: .six, suit: .heart), Card(rank: .five, suit: .spade), Card(rank: .nine, suit: .heart)]
+            return [Card(rank: .six, suit: .heart, side: .face_down), Card(rank: .five, suit: .spade, side: .face_down), Card(rank: .nine, suit: .heart, side: .face_down), Card(rank: .two, suit: .diamond), Card(rank: .two, suit: .club)]
         case .high_card:
-            return [Card(rank: .ace, suit: .diamond), Card(rank: .six, suit: .club), Card(rank: .two, suit: .heart), Card(rank: .eight, suit: .spade), Card(rank: .five, suit: .heart)]
+            return [Card(rank: .six, suit: .club, side: .face_down), Card(rank: .two, suit: .heart, side: .face_down), Card(rank: .eight, suit: .spade, side: .face_down), Card(rank: .five, suit: .heart, side: .face_down), Card(rank: .ace, suit: .diamond)]
         }
     }
 }

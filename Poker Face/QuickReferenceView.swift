@@ -105,11 +105,11 @@ struct CardView: View {
     
     var label: some View {
         VStack {
-            Text(card.rank.symbol)
+            Text(card.isFaceUp ? card.rank.symbol : "?")
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-            Image(systemName: card.suit.symbol)
-                .foregroundColor(card.suit.color)
+            Image(systemName: card.isFaceUp ? card.suit.symbol : "circle.dashed")
+                .foregroundColor(card.isFaceUp ? card.suit.color : .gray)
         }
     }
 }

@@ -120,5 +120,32 @@
         "wildranks": [],
         "steps": [],
         "variants": []
+    },
+    {
+        "id": 9,
+        "name": "No Peek",
+        "wildcards": [],
+        "wildranks": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt seven cards face down",
+                "subtext": "You may not look at your hand."
+            },
+            {
+                "description": "The player to the dealer's left flips one of their cards face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            }
+        ],
+        "variants": [
+            {
+                "name": "Midnight Baseball",
+                "description": "Threes and nines are wildcards"
+            }
+        ]
     }
 ]

@@ -18,9 +18,9 @@ struct GameDetailView: View {
                 Heading(text: "Wildcards")
                 WildcardsView(game: game)
                 Heading(text: "How to Play")
-                HowToView(steps: game.steps)
-                Heading(text: "Variants")
-                VariantsView(variants: game.variants)
+                HowToView(steps: game.steps, showQuickReference: $showQuickReference)
+                //                Heading(text: "Variants")
+                //                VariantsView(variants: game.variants)
             }
             .padding(.horizontal)
         }
@@ -28,26 +28,19 @@ struct GameDetailView: View {
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)
         })
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing, content: {
-                Button(action: {
-                    showQuickReference = true
-                }, label: {
-                    Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
-                })
-            })
-        }
     }
 }
 
 struct HowToView: View {
     var steps: [Instruction]
     
+    @Binding var showQuickReference: Bool
+    
     var body: some View {
         if !steps.isEmpty {
             VStack {
                 ForEach(0..<steps.count, id: \.self) { index in
-                    StepView(num: index + 1, step: steps[index])
+                    StepView(num: index + 1, step: steps[index], showQuickReference: $showQuickReference)
                 }
             }
             .padding(.all)
@@ -217,6 +210,8 @@ struct StepView: View {
     var num: Int
     var step: Instruction
     
+    @Binding var showQuickReference: Bool
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -248,6 +243,22 @@ struct StepView: View {
                         Spacer()
                     }
                 }
+                if step.offerQuickReference != nil && step.offerQuickReference! {
+                    HStack {
+                        Button(action: {
+                            showQuickReference = true
+                        }) {
+                            Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
+                                .fontWeight(.semibold)
+                                .font(.headline)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(.cyan)
+                                .cornerRadius(20)
+                        }
+                        Spacer()
+                    }
+                }
             }
             .padding(.leading)
             Spacer()
@@ -258,7 +269,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second")], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
         }
     }
 }

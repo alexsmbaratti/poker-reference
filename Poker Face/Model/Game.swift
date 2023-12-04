@@ -27,11 +27,17 @@ struct Game: Identifiable, Hashable, Codable {
 struct Instruction: Hashable, Codable {
     var description: String
     var subtext: String?
+    var offerQuickReference: Bool?
 }
 
 enum InstructionType: Int, Codable {
     case generic
     case ante_pay
+}
+
+enum WinConditionType: Int, Codable {
+    case basic_poker
+    case custom
 }
 
 struct Variant: Hashable, Codable {

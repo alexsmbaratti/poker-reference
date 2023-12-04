@@ -22,7 +22,8 @@
                 "description": "Another round of betting occurs"
             },
             {
-                "description": "Each player reveals their hand and the player with the best hand wins"
+                "description": "Each player reveals their hand and the player with the best hand wins",
+                "offerQuickReference": true
             }
         ],
         "variants": []

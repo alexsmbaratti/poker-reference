@@ -19,8 +19,10 @@ struct GameDetailView: View {
                 WildcardsView(game: game)
                 Heading(text: "How to Play")
                 HowToView(steps: game.steps, showQuickReference: $showQuickReference)
-                //                Heading(text: "Variants")
-                //                VariantsView(variants: game.variants)
+                if game.hasVariants() {
+                    Heading(text: "Variants")
+                    VariantsView(variants: game.variants)
+                }
             }
             .padding(.horizontal)
         }
@@ -160,16 +162,12 @@ struct VariantView: View {
                     .fontWeight(.bold)
                 Spacer()
             }
-            Text(variant.description)
-                .multilineTextAlignment(.leading)
+            HStack {
+                Text(variant.description)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
         }
-        .padding(.all)
-        .aspectRatio(contentMode: .fit)
-        .background(
-            RoundedRectangle(cornerRadius: 4, style: .continuous)
-                .foregroundColor(Color(.systemFill))
-                .shadow(radius: 7)
-        )
     }
 }
 
@@ -269,7 +267,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
         }
     }
 }

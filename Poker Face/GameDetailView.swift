@@ -253,7 +253,7 @@ struct StepView: View {
                                 .font(.headline)
                                 .padding()
                                 .foregroundColor(.white)
-                                .background(.cyan)
+                                .background(.primary)
                                 .cornerRadius(20)
                         }
                         Spacer()

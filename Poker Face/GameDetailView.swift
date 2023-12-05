@@ -15,40 +15,17 @@ struct GameDetailView: View {
     
     var body: some View {
         ScrollView {
-            if sizeClass == .compact {
-                Group {
-                    Heading(text: "Wildcards")
-                    WildcardsView(game: game)
-                    Heading(text: "How to Play")
-                    HowToView(steps: game.steps, showQuickReference: $showQuickReference)
-                    if game.hasVariants() {
-                        Heading(text: "Variants")
-                        VariantsView(variants: game.variants)
-                    }
+            Group {
+                Heading(text: "Wildcards")
+                WildcardsView(game: game)
+                Heading(text: "How to Play")
+                HowToView(steps: game.steps, showQuickReference: $showQuickReference)
+                if game.hasVariants() {
+                    Heading(text: "Variants")
+                    VariantsView(variants: game.variants)
                 }
-                .padding(.horizontal)
-            } else {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                    VStack(alignment: .leading, spacing: 16) {
-                        Heading(text: "Wildcards")
-                        WildcardsView(game: game)
-                        Spacer()
-                    }
-                    
-                    VStack(alignment: .leading, spacing: 16) {
-                        Heading(text: "How to Play")
-                        HowToView(steps: game.steps, showQuickReference: $showQuickReference)
-                        if game.hasVariants() {
-                            VStack(alignment: .leading, spacing: 16) {
-                                Heading(text: "Variants")
-                                VariantsView(variants: game.variants)
-                            }
-                        }
-                        Spacer()
-                    }
-                }
-                .padding(.horizontal)
             }
+            .padding(.horizontal)
         }
         .navigationBarTitle(game.name)
         .sheet(isPresented: $showQuickReference, content: {

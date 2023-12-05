@@ -11,20 +11,44 @@ struct GameDetailView: View {
     var game: Game
     
     @State var showQuickReference = false
+    @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
         ScrollView {
-            Group {
-                Heading(text: "Wildcards")
-                WildcardsView(game: game)
-                Heading(text: "How to Play")
-                HowToView(steps: game.steps, showQuickReference: $showQuickReference)
-                if game.hasVariants() {
-                    Heading(text: "Variants")
-                    VariantsView(variants: game.variants)
+            if sizeClass == .compact {
+                Group {
+                    Heading(text: "Wildcards")
+                    WildcardsView(game: game)
+                    Heading(text: "How to Play")
+                    HowToView(steps: game.steps, showQuickReference: $showQuickReference)
+                    if game.hasVariants() {
+                        Heading(text: "Variants")
+                        VariantsView(variants: game.variants)
+                    }
                 }
+                .padding(.horizontal)
+            } else {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Heading(text: "Wildcards")
+                        WildcardsView(game: game)
+                        Spacer()
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 16) {
+                        Heading(text: "How to Play")
+                        HowToView(steps: game.steps, showQuickReference: $showQuickReference)
+                        if game.hasVariants() {
+                            VStack(alignment: .leading, spacing: 16) {
+                                Heading(text: "Variants")
+                                VariantsView(variants: game.variants)
+                            }
+                        }
+                        Spacer()
+                    }
+                }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
         .navigationBarTitle(game.name)
         .sheet(isPresented: $showQuickReference, content: {
@@ -46,7 +70,7 @@ struct HowToView: View {
                 }
             }
             .padding(.all)
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .background(
                 RoundedRectangle(cornerRadius: 4, style: .continuous)
                     .foregroundColor(Color(.systemFill))
@@ -62,7 +86,7 @@ struct HowToView: View {
                 Spacer()
             }
             .padding(.all)
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .background(
                 RoundedRectangle(cornerRadius: 4, style: .continuous)
                     .foregroundColor(Color(.systemFill))
@@ -83,7 +107,7 @@ struct VariantsView: View {
                 }
             }
             .padding(.all)
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .background(
                 RoundedRectangle(cornerRadius: 4, style: .continuous)
                     .foregroundColor(Color(.systemFill))
@@ -99,7 +123,7 @@ struct VariantsView: View {
                 Spacer()
             }
             .padding(.all)
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .background(
                 RoundedRectangle(cornerRadius: 4, style: .continuous)
                     .foregroundColor(Color(.systemFill))
@@ -124,7 +148,7 @@ struct WildcardsView: View {
                     }
                 }
                 .padding(.all)
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .background(
                     RoundedRectangle(cornerRadius: 4, style: .continuous)
                         .foregroundColor(Color(.systemFill))
@@ -140,7 +164,7 @@ struct WildcardsView: View {
                     Spacer()
                 }
                 .padding(.all)
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .background(
                     RoundedRectangle(cornerRadius: 4, style: .continuous)
                         .foregroundColor(Color(.systemFill))
@@ -267,7 +291,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], variants: [Variant(name: "My Variant", description: "Description")]))
         }
     }
 }

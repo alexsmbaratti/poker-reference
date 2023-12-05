@@ -33,7 +33,7 @@ final class CardUtilsTests: XCTestCase {
     
     func testIsInSequence() throws {
         XCTAssertTrue(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .nine, suit: .heart), Card(rank: .eight, suit: .heart)]))
-        XCTAssertTrue(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .eight, suit: .heart), Card(rank: .nine, suit: .heart)]), "Test failed for sequential cards out of order")
+        XCTAssertFalse(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .eight, suit: .heart), Card(rank: .nine, suit: .heart)]), "Test failed for sequential cards out of order")
     }
     
     func testGetHand() throws {

@@ -4,6 +4,7 @@
         "name": "Five Card Draw",
         "wildcards": [],
         "wildranks": [],
+        "wildcustoms": [],
         "steps": [
             {
                 "description": "Pay the ante",
@@ -33,6 +34,7 @@
         "name": "Baseball",
         "wildcards": [],
         "wildranks": [ 3, 9 ],
+        "wildcustoms": [],
         "steps": [
             {
                 "description": "Pay the ante"
@@ -49,6 +51,7 @@
         "name": "Football",
         "wildcards": [],
         "wildranks": [ 3 ],
+        "wildcustoms": [],
         "steps": [],
         "variants": []
     },
@@ -61,6 +64,7 @@
             "side": 1
         }],
         "wildranks": [ 2, 11 ],
+        "wildcustoms": [],
         "steps": [],
         "variants": []
     },
@@ -69,6 +73,7 @@
         "name": "727",
         "wildcards": [],
         "wildranks": [],
+        "wildcustoms": [],
         "steps": [
             {
                 "description": "Pay the ante"
@@ -95,6 +100,7 @@
         "name": "Low Hole Roll Your Own",
         "wildcards": [],
         "wildranks": [],
+        "wildcustoms": [],
         "steps": [],
         "variants": []
     },
@@ -102,7 +108,8 @@
         "id": 6,
         "name": "Follow the Queens",
         "wildcards": [],
-        "wildranks": [],
+        "wildranks": [12],
+        "wildcustoms": ["Any Card Following a Face Up Queen"],
         "steps": [],
         "variants": []
     },
@@ -111,6 +118,7 @@
         "name": "Jack the Shifter",
         "wildcards": [],
         "wildranks": [],
+        "wildcustoms": [],
         "steps": [],
         "variants": []
     },
@@ -119,14 +127,26 @@
         "name": "Twenty-One",
         "wildcards": [],
         "wildranks": [],
-        "steps": [],
+        "wildcustoms": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt one card face down and one card face up"
+            },
+            {
+                "description": "Each player can ask for more cards"
+            }
+        ],
         "variants": []
     },
     {
         "id": 9,
-        "name": "No Peek",
+        "name": "No Peekie",
         "wildcards": [],
         "wildranks": [],
+        "wildcustoms": [],
         "steps": [
             {
                 "description": "Pay the ante"

@@ -123,6 +123,9 @@ struct WildcardsView: View {
                     ForEach(game.wildcards, id: \.self) { card in
                         WildsReferenceView(text: card.description, cards: [card])
                     }
+                    ForEach(game.wildcustoms, id: \.self) { description in
+                        WildsReferenceView(text: description, cards: [])
+                    }
                 }
                 .padding(.all)
                 .aspectRatio(contentMode: .fill)
@@ -184,8 +187,10 @@ struct WildsReferenceView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                CardStackView(cards: cards)
-                    .scaleEffect(0.7)
+                if !cards.isEmpty {
+                    CardStackView(cards: cards)
+                        .scaleEffect(0.7)
+                }
             }
         }
         .frame(height: 80)
@@ -268,7 +273,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], variants: [Variant(name: "My Variant", description: "Description")]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]))
         }
     }
 }

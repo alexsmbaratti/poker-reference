@@ -13,10 +13,11 @@ struct Game: Identifiable, Hashable, Codable {
     var steps: [Instruction] = []
     var wildranks: [Rank] = []
     var wildcards: [Card] = []
+    var wildcustoms: [String] = []
     var variants: [Variant] = []
     
     func hasWilds() -> Bool {
-        return !wildcards.isEmpty || !wildranks.isEmpty
+        return !wildcards.isEmpty || !wildranks.isEmpty || !wildcustoms.isEmpty
     }
     
     func hasVariants() -> Bool {

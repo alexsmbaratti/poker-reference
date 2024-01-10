@@ -257,7 +257,9 @@ struct StepView: View {
                                 .font(.headline)
                                 .padding()
                                 .foregroundColor(.white)
+#if !os(visionOS)
                                 .background(.primary)
+#endif
                                 .cornerRadius(20)
                         }
                         Spacer()

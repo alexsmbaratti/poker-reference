@@ -222,7 +222,11 @@ struct StepView: View {
         HStack {
             ZStack {
                 Circle()
+#if os(visionOS)
+                    .foregroundStyle(.bar)
+#else
                     .foregroundColor(colorScheme == .dark ? .black : .gray)
+#endif
                 Text(String(num))
                     .font(.title2)
                     .fontWeight(.bold)
@@ -259,6 +263,8 @@ struct StepView: View {
                                 .foregroundColor(.white)
 #if !os(visionOS)
                                 .background(.primary)
+#else
+                                .backgroundStyle(.primary)
 #endif
                                 .cornerRadius(20)
                         }

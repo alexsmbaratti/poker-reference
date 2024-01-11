@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Abstract into sheet and window
 struct QuickReferenceView: View {
     @Binding var isShowing: Bool
     

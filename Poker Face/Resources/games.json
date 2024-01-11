@@ -106,7 +106,7 @@
     },
     {
         "id": 6,
-        "name": "Follow the Queens",
+        "name": "Follow the Queen",
         "wildcards": [],
         "wildranks": [12],
         "wildcustoms": ["Any Card Following a Face Up Queen"],

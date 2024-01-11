@@ -16,6 +16,7 @@ struct GameDetailView: View {
     var body: some View {
         ScrollView {
             Group {
+                // TODO: Add winning hand and special cards sections
                 Heading(text: "Wildcards")
                 WildcardsView(game: game)
                 Heading(text: "How to Play")

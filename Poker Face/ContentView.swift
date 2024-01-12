@@ -40,7 +40,7 @@ struct ContentView: View {
             }
         }, detail: {
             if selectedGame != nil {
-                GameDetailView(game: selectedGame!)
+                GameDetailView(game: selectedGame!, showQuickReference: $showQuickReference)
             } else {
                 VStack {
                     Spacer()

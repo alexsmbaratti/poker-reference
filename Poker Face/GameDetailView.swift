@@ -10,7 +10,7 @@ import SwiftUI
 struct GameDetailView: View {
     var game: Game
     
-    @State var showQuickReference = false
+    @Binding var showQuickReference: Bool
     @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
@@ -29,9 +29,6 @@ struct GameDetailView: View {
             .padding(.horizontal)
         }
         .navigationBarTitle(game.name)
-        .sheet(isPresented: $showQuickReference, content: {
-            QuickReferenceView(isShowing: $showQuickReference)
-        })
     }
 }
 
@@ -278,7 +275,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false))
         }
     }
 }

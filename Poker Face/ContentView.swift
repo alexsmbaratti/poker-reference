@@ -12,6 +12,10 @@ struct ContentView: View {
     @State var selectedGame: Game? = nil
     
     @Environment(\.horizontalSizeClass) var sizeClass
+#if !os(iOS)
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
+#endif
     
     var body: some View {
         NavigationSplitView(sidebar: {
@@ -57,9 +61,15 @@ struct ContentView: View {
                 }
             }
         })
+#if os(iOS)
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)
         })
+#else
+        .onChange(of: showQuickReference) {
+            openWindow(id: "quick-reference")
+        }
+#endif
     }
 }
 

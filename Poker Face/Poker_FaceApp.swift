@@ -19,10 +19,12 @@ struct Poker_FaceApp: App {
 #if os(visionOS)
         .windowResizability(.contentSize)
 #endif
-#if os(visionOS)
+#if !os(iOS)
         WindowGroup(id: "quick-reference") {
             QuickReferenceView(isShowing: .constant(true))
+                .frame(minWidth: 600, maxWidth: 600, minHeight: 600)
         }
+        .windowResizability(.contentSize)
 #endif
     }
 }

@@ -262,6 +262,7 @@ struct StepView: View {
 #endif
                                 .cornerRadius(20)
                         }
+                        .disabled(showQuickReference)
                         Spacer()
                     }
                 }

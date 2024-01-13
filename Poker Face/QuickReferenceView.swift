@@ -19,6 +19,7 @@ struct QuickReferenceView: View {
                     Divider()
                 }
             }
+#if os(iOS)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing, content: {
                     Button(action: {
@@ -28,6 +29,7 @@ struct QuickReferenceView: View {
                     })
                 })
             }
+#endif
             .padding(.horizontal)
             .navigationTitle("Quick Reference")
             .navigationBarTitleDisplayMode(.inline)

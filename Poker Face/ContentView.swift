@@ -14,7 +14,6 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
 #if !os(iOS)
     @Environment(\.openWindow) private var openWindow
-    @Environment(\.dismissWindow) private var dismissWindow
 #endif
     
     var body: some View {

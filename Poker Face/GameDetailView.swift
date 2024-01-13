@@ -11,6 +11,7 @@ struct GameDetailView: View {
     var game: Game
     
     @Binding var showQuickReference: Bool
+    @Binding var openWindows: Set<String>
     @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
@@ -20,7 +21,7 @@ struct GameDetailView: View {
                 Heading(text: "Wildcards")
                 WildcardsView(game: game)
                 Heading(text: "How to Play")
-                HowToView(steps: game.steps, showQuickReference: $showQuickReference)
+                HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasVariants() {
                     Heading(text: "Variants")
                     VariantsView(variants: game.variants)
@@ -36,12 +37,13 @@ struct HowToView: View {
     var steps: [Instruction]
     
     @Binding var showQuickReference: Bool
+    @Binding var openWindows: Set<String>
     
     var body: some View {
         if !steps.isEmpty {
             VStack {
                 ForEach(0..<steps.count, id: \.self) { index in
-                    StepView(num: index + 1, step: steps[index], showQuickReference: $showQuickReference)
+                    StepView(num: index + 1, step: steps[index], showQuickReference: $showQuickReference, openWindows: $openWindows)
                 }
             }
             .padding(.all)
@@ -213,6 +215,7 @@ struct StepView: View {
     var step: Instruction
     
     @Binding var showQuickReference: Bool
+    @Binding var openWindows: Set<String>
     
     @Environment(\.colorScheme) var colorScheme
 #if !os(iOS)
@@ -252,9 +255,9 @@ struct StepView: View {
                     HStack {
                         Button(action: {
 #if !os(iOS)
-                            if Poker_FaceApp.openWindows.contains("quick-reference") {
+                            if !openWindows.contains("quick-reference") {
                                 openWindow(id: "quick-reference")
-                                Poker_FaceApp.openWindows.insert("quick-reference")
+                                openWindows.insert("quick-reference")
                             }
 #else
                             showQuickReference = true
@@ -264,14 +267,17 @@ struct StepView: View {
                                 .fontWeight(.semibold)
                                 .font(.headline)
                                 .padding()
-                                .foregroundColor(.white)
 #if !os(visionOS)
-                                .background(.primary)
+                                .foregroundColor(.white) // Needed to prevent green text on iOS
+                                .background(.primary) // Needed to give button accent color on iOS
 #else
                                 .backgroundStyle(.primary)
 #endif
                                 .cornerRadius(20)
                         }
+#if !os(iOS)
+                        .disabled(openWindows.contains("quick-reference"))
+#endif
                         Spacer()
                     }
                 }
@@ -285,7 +291,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false), openWindows: .constant([]))
         }
     }
 }

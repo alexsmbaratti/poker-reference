@@ -11,6 +11,8 @@ struct ContentView: View {
     @State var showQuickReference = false
     @State var selectedGame: Game? = nil
     
+    @Binding var openWindows: Set<String>
+    
     @Environment(\.horizontalSizeClass) var sizeClass
 #if !os(iOS)
     @Environment(\.openWindow) private var openWindow
@@ -36,9 +38,9 @@ struct ContentView: View {
                 ToolbarItem(placement: sizeClass == .compact ? .topBarLeading : .topBarTrailing, content: {
                     Button(action: {
 #if !os(iOS)
-                        if !Poker_FaceApp.openWindows.contains("quick-reference") {
+                        if !openWindows.contains("quick-reference") {
                             openWindow(id: "quick-reference")
-                            Poker_FaceApp.openWindows.insert("quick-reference")
+                            openWindows.insert("quick-reference")
                         }
 #else
                         showQuickReference = true
@@ -46,11 +48,14 @@ struct ContentView: View {
                     }, label: {
                         Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
                     })
+#if !os(iOS)
+                    .disabled(openWindows.contains("quick-reference"))
+#endif
                 })
             }
         }, detail: {
             if selectedGame != nil {
-                GameDetailView(game: selectedGame!, showQuickReference: $showQuickReference)
+                GameDetailView(game: selectedGame!, showQuickReference: $showQuickReference, openWindows: $openWindows)
             } else {
                 VStack {
                     Spacer()
@@ -77,6 +82,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(openWindows: .constant([]))
     }
 }

@@ -5,6 +5,7 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [
             {
                 "description": "Pay the ante",
@@ -35,6 +36,7 @@
         "wildcards": [],
         "wildranks": [ 3, 9 ],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [
             {
                 "description": "Pay the ante"
@@ -52,6 +54,7 @@
         "wildcards": [],
         "wildranks": [ 3 ],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [],
         "variants": []
     },
@@ -65,6 +68,7 @@
         }],
         "wildranks": [ 2, 11 ],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [],
         "variants": []
     },
@@ -74,6 +78,28 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [
+                {
+                    "description": "Adds to 7 and 27",
+                    "cards": [
+                        {
+                            "rank": 1,
+                            "suit": 1,
+                            "side": 1
+                        },
+                        {
+                            "rank": 1,
+                            "suit": 1,
+                            "side": 1
+                        },
+                        {
+                            "rank": 5,
+                            "suit": 1,
+                            "side": 1
+                        }
+                    ]
+                }
+        ],
         "steps": [
             {
                 "description": "Pay the ante"
@@ -101,6 +127,7 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [],
         "variants": []
     },
@@ -108,8 +135,9 @@
         "id": 6,
         "name": "Follow the Queen",
         "wildcards": [],
-        "wildranks": [12],
+        "wildranks": [ 12 ],
         "wildcustoms": ["Any Card Following a Face Up Queen"],
+        "winningHands": [],
         "steps": [],
         "variants": []
     },
@@ -119,6 +147,7 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [],
         "variants": []
     },
@@ -128,6 +157,7 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [
             {
                 "description": "Pay the ante"
@@ -147,6 +177,7 @@
         "wildcards": [],
         "wildranks": [],
         "wildcustoms": [],
+        "winningHands": [],
         "steps": [
             {
                 "description": "Pay the ante"

@@ -20,6 +20,10 @@ struct GameDetailView: View {
                 // TODO: Add winning hand and special cards sections
                 Heading(text: "Wildcards")
                 WildcardsView(game: game)
+                if game.hasWinningHands() {
+                    Heading(text: "Winning Hands")
+                    CardBunchReferenceView(cardBunches: game.winningHands)
+                }
                 Heading(text: "How to Play")
                 HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasVariants() {
@@ -116,15 +120,15 @@ struct WildcardsView: View {
     var body: some View {
         VStack {
             if (game.hasWilds()) {
-                VStack {
+                VStack { // Clean up and return these in function in game
                     ForEach(game.wildranks, id: \.self) { rank in
-                        WildsReferenceView(text: rank.descriptionPlural, cards: rank.allSuits)
+                        CardBunchView(text: rank.descriptionPlural, cards: rank.allSuits)
                     }
                     ForEach(game.wildcards, id: \.self) { card in
-                        WildsReferenceView(text: card.description, cards: [card])
+                        CardBunchView(text: card.description, cards: [card])
                     }
                     ForEach(game.wildcustoms, id: \.self) { description in
-                        WildsReferenceView(text: description, cards: [])
+                        CardBunchView(text: description, cards: [])
                     }
                 }
                 .padding(.all)
@@ -155,6 +159,25 @@ struct WildcardsView: View {
     }
 }
 
+struct CardBunchReferenceView: View {
+    var cardBunches: [CardBunch]
+    
+    var body: some View {
+        VStack {
+            ForEach(cardBunches, id: \.self) { cardBunch in
+                CardBunchView(text: cardBunch.description, cards: cardBunch.cards)
+            }
+        }
+        .padding(.all)
+        .aspectRatio(contentMode: .fill)
+        .background(
+            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                .foregroundColor(Color(.systemFill))
+                .shadow(radius: 7)
+        )
+    }
+}
+
 struct VariantView: View {
     var variant: Variant
     
@@ -175,7 +198,7 @@ struct VariantView: View {
     }
 }
 
-struct WildsReferenceView: View {
+struct CardBunchView: View {
     var text: String
     var cards: [Card]
     

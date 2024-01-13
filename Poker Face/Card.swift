@@ -64,6 +64,11 @@ struct Card: CustomStringConvertible, Hashable, Codable {
     }
 }
 
+struct CardBunch: Codable, Hashable {
+    var description: String
+    var cards: [Card]
+}
+
 enum CardSide: Int, Codable {
     case face_down = 0
     case face_up = 1

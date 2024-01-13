@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Poker_FaceApp: App {
+    static var openWindows: Set<String> = []
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -23,6 +25,9 @@ struct Poker_FaceApp: App {
         WindowGroup(id: "quick-reference") {
             QuickReferenceView(isShowing: .constant(true))
                 .frame(minWidth: 600, maxWidth: 600, minHeight: 600)
+                .onDisappear(perform: {
+                    Poker_FaceApp.openWindows.remove("quick-reference")
+                })
         }
         .windowResizability(.contentSize)
 #endif

@@ -215,6 +215,9 @@ struct StepView: View {
     @Binding var showQuickReference: Bool
     
     @Environment(\.colorScheme) var colorScheme
+#if !os(iOS)
+    @Environment(\.openWindow) private var openWindow
+#endif
     
     var body: some View {
         HStack {
@@ -248,7 +251,14 @@ struct StepView: View {
                 if step.offerQuickReference != nil && step.offerQuickReference! {
                     HStack {
                         Button(action: {
+#if !os(iOS)
+                            if Poker_FaceApp.openWindows.contains("quick-reference") {
+                                openWindow(id: "quick-reference")
+                                Poker_FaceApp.openWindows.insert("quick-reference")
+                            }
+#else
                             showQuickReference = true
+#endif
                         }) {
                             Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
                                 .fontWeight(.semibold)
@@ -262,7 +272,6 @@ struct StepView: View {
 #endif
                                 .cornerRadius(20)
                         }
-                        .disabled(showQuickReference)
                         Spacer()
                     }
                 }

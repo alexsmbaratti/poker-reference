@@ -35,7 +35,14 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: sizeClass == .compact ? .topBarLeading : .topBarTrailing, content: {
                     Button(action: {
+#if !os(iOS)
+                        if !Poker_FaceApp.openWindows.contains("quick-reference") {
+                            openWindow(id: "quick-reference")
+                            Poker_FaceApp.openWindows.insert("quick-reference")
+                        }
+#else
                         showQuickReference = true
+#endif
                     }, label: {
                         Label("Quick Reference", systemImage: "rectangle.portrait.on.rectangle.portrait.angled")
                     })
@@ -64,10 +71,6 @@ struct ContentView: View {
         .sheet(isPresented: $showQuickReference, content: {
             QuickReferenceView(isShowing: $showQuickReference)
         })
-#else
-        .onChange(of: showQuickReference) {
-            openWindow(id: "quick-reference")
-        }
 #endif
     }
 }

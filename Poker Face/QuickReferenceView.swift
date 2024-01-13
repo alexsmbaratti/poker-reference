@@ -84,33 +84,35 @@ struct CardView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
-                .foregroundColor(.white)
+                .foregroundStyle(card.isFaceUp ? .white : .gray)
                 .shadow(radius: 5)
-            HStack {
-                VStack {
-                    label
+            if card.isFaceUp {
+                HStack {
+                    VStack {
+                        label
+                        Spacer()
+                    }
+                    .dynamicTypeSize(.medium)
                     Spacer()
+                    VStack {
+                        label
+                        Spacer()
+                    }
+                    .rotationEffect(.degrees(180))
                 }
-                .dynamicTypeSize(.medium)
-                Spacer()
-                VStack {
-                    label
-                    Spacer()
-                }
-                .rotationEffect(.degrees(180))
+                .padding(.all, 3.0)
             }
-            .padding(.all, 3.0)
         }
         .frame(width: 70, height: 100)
     }
     
     var label: some View {
         VStack {
-            Text(card.isFaceUp ? card.rank.symbol : "?")
+            Text(card.rank.symbol)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-            Image(systemName: card.isFaceUp ? card.suit.symbol : "circle.dashed")
-                .foregroundColor(card.isFaceUp ? card.suit.color : .gray)
+            Image(systemName: card.suit.symbol)
+                .foregroundColor(card.suit.color)
         }
     }
 }

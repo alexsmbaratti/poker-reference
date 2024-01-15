@@ -79,6 +79,7 @@ enum Suit: Int, CustomStringConvertible, Codable {
     case diamond = 1
     case heart = 2
     case spade = 3
+    case wild = 4
     
     var symbol: String {
         switch self {
@@ -90,6 +91,8 @@ enum Suit: Int, CustomStringConvertible, Codable {
             return "suit.heart.fill"
         case .spade:
             return "suit.spade.fill"
+        case .wild:
+            return "questionmark.square.dashed"
         }
     }
     
@@ -103,6 +106,8 @@ enum Suit: Int, CustomStringConvertible, Codable {
             return "Hearts"
         case .spade:
             return "Spades"
+        case .wild:
+            return "Any Suit"
         }
     }
     
@@ -116,6 +121,8 @@ enum Suit: Int, CustomStringConvertible, Codable {
             return .red
         case .spade:
             return .black
+        case .wild:
+            return .gray
         }
     }
 }

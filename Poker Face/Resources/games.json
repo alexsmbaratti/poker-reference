@@ -84,17 +84,17 @@
                     "cards": [
                         {
                             "rank": 1,
-                            "suit": 1,
+                            "suit": 4,
                             "side": 1
                         },
                         {
                             "rank": 1,
-                            "suit": 1,
+                            "suit": 4,
                             "side": 1
                         },
                         {
                             "rank": 5,
-                            "suit": 1,
+                            "suit": 4,
                             "side": 1
                         }
                     ]

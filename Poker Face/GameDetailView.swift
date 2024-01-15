@@ -18,8 +18,10 @@ struct GameDetailView: View {
         ScrollView {
             Group {
                 // TODO: Add winning hand and special cards sections
-                Heading(text: "Wild Cards")
-                WildCardsView(game: game)
+                if game.hasWilds() {
+                    Heading(text: "Wild Cards")
+                    CardBunchReferenceView(cardBunches: game.getAllWildCards())
+                }
                 if game.hasWinningHands() {
                     Heading(text: "Winning Hands")
                     CardBunchReferenceView(cardBunches: game.winningHands)
@@ -110,51 +112,6 @@ struct VariantsView: View {
                     .foregroundColor(Color(.systemFill))
                     .shadow(radius: 7)
             )
-        }
-    }
-}
-
-struct WildCardsView: View {
-    var game: Game
-    
-    var body: some View {
-        VStack {
-            if (game.hasWilds()) {
-                VStack { // Clean up and return these in function in game
-                    ForEach(game.wildRanks, id: \.self) { rank in
-                        CardBunchView(text: rank.descriptionPlural, cards: rank.allSuits)
-                    }
-                    ForEach(game.wildCards, id: \.self) { card in
-                        CardBunchView(text: card.description, cards: [card])
-                    }
-                    ForEach(game.wildCustoms, id: \.self) { description in
-                        CardBunchView(text: description, cards: [])
-                    }
-                }
-                .padding(.all)
-                .aspectRatio(contentMode: .fill)
-                .background(
-                    RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .foregroundColor(Color(.systemFill))
-                        .shadow(radius: 7)
-                )
-            } else {
-                HStack {
-                    Spacer()
-                    Text("No Wild Cards")
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                .padding(.all)
-                .aspectRatio(contentMode: .fill)
-                .background(
-                    RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .foregroundColor(Color(.systemFill))
-                        .shadow(radius: 7)
-                )
-            }
         }
     }
 }

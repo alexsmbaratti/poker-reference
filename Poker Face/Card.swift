@@ -92,7 +92,7 @@ enum Suit: Int, CustomStringConvertible, Codable {
         case .spade:
             return "suit.spade.fill"
         case .wild:
-            return "questionmark.square.dashed"
+            return "questionmark"
         }
     }
     

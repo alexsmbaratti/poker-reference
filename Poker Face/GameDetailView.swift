@@ -35,7 +35,7 @@ struct GameDetailView: View {
             }
             .padding(.horizontal)
         }
-        .navigationBarTitle(game.name)
+        .navigationTitle(game.name)
     }
 }
 

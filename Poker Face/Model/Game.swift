@@ -30,9 +30,9 @@ struct Game: Identifiable, Hashable, Codable {
     }
     
     func getAllWildCards() -> [CardBunch] {
-        var rankBunches: [CardBunch] = wildRanks.map({ CardBunch(description: $0.descriptionPlural, cards: $0.allSuits) })
-        var cardBunches: [CardBunch] = wildCards.map({ CardBunch(description: $0.description, cards: [$0]) })
-        var customBunches: [CardBunch] = wildCustoms.map({ CardBunch(description: $0, cards: []) })
+        let rankBunches: [CardBunch] = wildRanks.map({ CardBunch(description: $0.descriptionPlural, cards: $0.allSuits) })
+        let cardBunches: [CardBunch] = wildCards.map({ CardBunch(description: $0.description, cards: [$0]) })
+        let customBunches: [CardBunch] = wildCustoms.map({ CardBunch(description: $0, cards: []) })
         return rankBunches + cardBunches + customBunches
     }
 }

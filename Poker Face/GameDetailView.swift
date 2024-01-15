@@ -18,8 +18,8 @@ struct GameDetailView: View {
         ScrollView {
             Group {
                 // TODO: Add winning hand and special cards sections
-                Heading(text: "Wildcards")
-                WildcardsView(game: game)
+                Heading(text: "Wild Cards")
+                WildCardsView(game: game)
                 if game.hasWinningHands() {
                     Heading(text: "Winning Hands")
                     CardBunchReferenceView(cardBunches: game.winningHands)
@@ -114,7 +114,7 @@ struct VariantsView: View {
     }
 }
 
-struct WildcardsView: View {
+struct WildCardsView: View {
     var game: Game
     
     var body: some View {
@@ -124,7 +124,7 @@ struct WildcardsView: View {
                     ForEach(game.wildRanks, id: \.self) { rank in
                         CardBunchView(text: rank.descriptionPlural, cards: rank.allSuits)
                     }
-                    ForEach(game.wildcards, id: \.self) { card in
+                    ForEach(game.wildCards, id: \.self) { card in
                         CardBunchView(text: card.description, cards: [card])
                     }
                     ForEach(game.wildCustoms, id: \.self) { description in
@@ -141,7 +141,7 @@ struct WildcardsView: View {
             } else {
                 HStack {
                     Spacer()
-                    Text("No Wildcards")
+                    Text("No Wild Cards")
                         .font(.title)
                         .fontWeight(.medium)
                         .foregroundColor(.secondary)
@@ -314,7 +314,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildRanks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildCustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false), openWindows: .constant([]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildRanks: [.seven, .nine], wildCards: [Card(rank: .queen, suit: .heart)], wildCustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false), openWindows: .constant([]))
         }
     }
 }

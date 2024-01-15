@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Five Card Draw",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
@@ -33,7 +33,7 @@
     {
         "id": 1,
         "name": "Baseball",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [ 3, 9 ],
         "wildCustoms": [],
         "winningHands": [],
@@ -51,7 +51,7 @@
     {
         "id": 2,
         "name": "Football",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [ 3 ],
         "wildCustoms": [],
         "winningHands": [],
@@ -61,7 +61,7 @@
     {
         "id": 3,
         "name": "Screwball",
-        "wildcards": [ {
+        "wildCards": [ {
             "rank": 13,
             "suit": 1,
             "side": 1
@@ -75,7 +75,7 @@
     {
         "id": 4,
         "name": "727",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [
@@ -124,7 +124,7 @@
     {
         "id": 5,
         "name": "Low Hole Roll Your Own",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
@@ -134,7 +134,7 @@
     {
         "id": 6,
         "name": "Follow the Queen",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [ 12 ],
         "wildCustoms": ["Any Card Following a Face Up Queen"],
         "winningHands": [],
@@ -144,7 +144,7 @@
     {
         "id": 7,
         "name": "Jack the Shifter",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
@@ -154,7 +154,7 @@
     {
         "id": 8,
         "name": "Twenty-One",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
@@ -174,7 +174,7 @@
     {
         "id": 9,
         "name": "No Peekie",
-        "wildcards": [],
+        "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
@@ -196,7 +196,7 @@
         "variants": [
             {
                 "name": "Midnight Baseball",
-                "description": "Threes and nines are wildcards"
+                "description": "Threes and nines are wild cards"
             }
         ]
     }

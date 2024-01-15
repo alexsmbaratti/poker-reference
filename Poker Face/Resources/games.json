@@ -3,8 +3,8 @@
         "id": 0,
         "name": "Five Card Draw",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [
             {
@@ -34,8 +34,8 @@
         "id": 1,
         "name": "Baseball",
         "wildcards": [],
-        "wildranks": [ 3, 9 ],
-        "wildcustoms": [],
+        "wildRanks": [ 3, 9 ],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [
             {
@@ -52,8 +52,8 @@
         "id": 2,
         "name": "Football",
         "wildcards": [],
-        "wildranks": [ 3 ],
-        "wildcustoms": [],
+        "wildRanks": [ 3 ],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [],
         "variants": []
@@ -66,8 +66,8 @@
             "suit": 1,
             "side": 1
         }],
-        "wildranks": [ 2, 11 ],
-        "wildcustoms": [],
+        "wildRanks": [ 2, 11 ],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [],
         "variants": []
@@ -76,8 +76,8 @@
         "id": 4,
         "name": "727",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [
                 {
                     "description": "Adds to 7 and 27",
@@ -125,8 +125,8 @@
         "id": 5,
         "name": "Low Hole Roll Your Own",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [],
         "variants": []
@@ -135,8 +135,8 @@
         "id": 6,
         "name": "Follow the Queen",
         "wildcards": [],
-        "wildranks": [ 12 ],
-        "wildcustoms": ["Any Card Following a Face Up Queen"],
+        "wildRanks": [ 12 ],
+        "wildCustoms": ["Any Card Following a Face Up Queen"],
         "winningHands": [],
         "steps": [],
         "variants": []
@@ -145,8 +145,8 @@
         "id": 7,
         "name": "Jack the Shifter",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [],
         "variants": []
@@ -155,8 +155,8 @@
         "id": 8,
         "name": "Twenty-One",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [
             {
@@ -175,8 +175,8 @@
         "id": 9,
         "name": "No Peekie",
         "wildcards": [],
-        "wildranks": [],
-        "wildcustoms": [],
+        "wildRanks": [],
+        "wildCustoms": [],
         "winningHands": [],
         "steps": [
             {

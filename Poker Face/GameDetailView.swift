@@ -121,13 +121,13 @@ struct WildcardsView: View {
         VStack {
             if (game.hasWilds()) {
                 VStack { // Clean up and return these in function in game
-                    ForEach(game.wildranks, id: \.self) { rank in
+                    ForEach(game.wildRanks, id: \.self) { rank in
                         CardBunchView(text: rank.descriptionPlural, cards: rank.allSuits)
                     }
                     ForEach(game.wildcards, id: \.self) { card in
                         CardBunchView(text: card.description, cards: [card])
                     }
-                    ForEach(game.wildcustoms, id: \.self) { description in
+                    ForEach(game.wildCustoms, id: \.self) { description in
                         CardBunchView(text: description, cards: [])
                     }
                 }
@@ -314,7 +314,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildranks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildcustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false), openWindows: .constant([]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildRanks: [.seven, .nine], wildcards: [Card(rank: .queen, suit: .heart)], wildCustoms: ["Some Wild Cards"], variants: [Variant(name: "My Variant", description: "Description")]), showQuickReference: .constant(false), openWindows: .constant([]))
         }
     }
 }

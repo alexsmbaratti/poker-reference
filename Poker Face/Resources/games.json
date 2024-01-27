@@ -262,9 +262,17 @@
         "name": "Jack the Shifter",
         "wildCards": [],
         "wildRanks": [],
-        "wildCustoms": [],
+        "wildCustoms": ["Depends on the Game Chosen"],
         "winningHands": [],
-        "steps": [],
+        "format": "seven_card_stud",
+        "steps": [
+            {
+                "description": "Play normal Seven Card Stud until a Jack is dealt face up"
+            },
+            {
+                "description": "Anytime a Jack is dealt face up, that player will choose any Seven Card Stud game to switch to"
+            }
+        ],
         "variants": []
     },
     {

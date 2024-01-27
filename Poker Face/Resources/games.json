@@ -80,6 +80,38 @@
         "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
+        "rankValues": [
+            {
+                "cards": [
+                    {
+                        "rank": 11,
+                        "suit": 4,
+                        "side": 1
+                    },
+                    {
+                        "rank": 12,
+                        "suit": 4,
+                        "side": 1
+                    },
+                    {
+                        "rank": 13,
+                        "suit": 4,
+                        "side": 1
+                    }
+                ],
+                "description": "½"
+            },
+            {
+                "cards": [
+                    {
+                        "rank": 1,
+                        "suit": 4,
+                        "side": 1
+                    }
+                ],
+                "description": "1 or 11"
+            }
+        ],
         "winningHands": [
                 {
                     "description": "Adds to 7 and 27",
@@ -117,7 +149,8 @@
                 "description": "Play continues until one player has passed three times"
             },
             {
-                "description": "Each player reveals their hand and the players with hands closest to 7 or 27 wins"
+                "description": "Each player reveals their hand and the players with hands closest to 7 or 27 wins",
+                "subtext": "Closest refers to closest without going over."
             }
         ],
         "variants": []

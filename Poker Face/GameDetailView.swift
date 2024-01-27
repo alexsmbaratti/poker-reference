@@ -31,6 +31,10 @@ struct GameDetailView: View {
                     Heading(text: "Wild Cards")
                     CardBunchReferenceView(cardBunches: game.getAllWildCards())
                 }
+                if game.hasRankValues() {
+                    Heading(text: "Rank Values")
+                    CardBunchReferenceView(cardBunches: game.rankValues!)
+                }
                 Heading(text: "How to Play")
                 HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasWinningHands() {

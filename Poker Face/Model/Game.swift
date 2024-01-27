@@ -15,6 +15,7 @@ struct Game: Identifiable, Hashable, Codable {
     var wildCards: [Card] = []
     var wildCustoms: [String] = []
     var winningHands: [CardBunch] = []
+    var rankValues: [CardBunch]?
     // TODO: Add special card values and behaviors
     var variants: [Variant] = []
     var format: GameFormat?
@@ -29,6 +30,10 @@ struct Game: Identifiable, Hashable, Codable {
     
     func hasVariants() -> Bool {
         return !variants.isEmpty
+    }
+    
+    func hasRankValues() -> Bool {
+        return rankValues != nil && !rankValues!.isEmpty
     }
     
     func getAllWildCards() -> [CardBunch] {

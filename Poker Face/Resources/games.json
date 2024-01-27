@@ -5,7 +5,38 @@
         "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
-        "winningHands": [],
+        "winningHands": [
+                {
+                    "description": "Royal Flush",
+                    "cards": [
+                        {
+                            "rank": 1,
+                            "suit": 4,
+                            "side": 1
+                        },
+                        {
+                            "rank": 13,
+                            "suit": 4,
+                            "side": 1
+                        },
+                        {
+                            "rank": 12,
+                            "suit": 4,
+                            "side": 1
+                        },
+                        {
+                            "rank": 11,
+                            "suit": 4,
+                            "side": 1
+                        },
+                        {
+                            "rank": 10,
+                            "suit": 4,
+                            "side": 1
+                        }
+                    ]
+                }
+        ],
         "format": "five_card_draw",
         "steps": [
             {

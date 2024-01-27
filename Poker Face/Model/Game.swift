@@ -16,6 +16,7 @@ struct Game: Identifiable, Hashable, Codable {
     var wildCustoms: [String] = []
     var winningHands: [CardBunch] = []
     var variants: [Variant] = []
+    var format: GameFormat?
     
     func hasWilds() -> Bool {
         return !wildCards.isEmpty || !wildRanks.isEmpty || !wildCustoms.isEmpty
@@ -48,12 +49,33 @@ enum InstructionType: Int, Codable {
     case ante_pay
 }
 
-enum WinConditionType: Int, Codable {
-    case basic_poker
-    case custom
-}
-
 struct Variant: Hashable, Codable {
     var name: String
     var description: String
+}
+
+enum GameFormat: String, Codable {
+    /**
+     Deal five cards face down, discard unwanted cards, and exchange for new cards
+     */
+    case five_card_draw = "five_card_draw"
+    /**
+     Two cards down, four up, one down
+     */
+    case seven_card_stud = "seven_card_stud"
+    /**
+     Three cards down, flip one card up, build your own hand
+     */
+    case roll_your_own = "roll_your_own"
+    
+    var name: String {
+        switch self {
+        case .five_card_draw:
+            return "Five Card Draw"
+        case .roll_your_own:
+            return "Roll Your Own"
+        case .seven_card_stud:
+            return "Seven Card Stud"
+        }
+    }
 }

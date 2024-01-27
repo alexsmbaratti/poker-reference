@@ -18,6 +18,15 @@ struct GameDetailView: View {
         ScrollView {
             Group {
                 // TODO: Add winning hand and special cards sections
+                if game.format != nil {
+                    HStack {
+                        Text(game.format!.name + " Format")
+                            .foregroundStyle(.secondary)
+                            .font(.headline)
+                            .italic()
+                        Spacer()
+                    }
+                }
                 if game.hasWilds() {
                     Heading(text: "Wild Cards")
                     CardBunchReferenceView(cardBunches: game.getAllWildCards())

@@ -6,6 +6,7 @@
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
+        "format": "five_card_draw",
         "steps": [
             {
                 "description": "Pay the ante",
@@ -37,6 +38,7 @@
         "wildRanks": [ 3, 9 ],
         "wildCustoms": [],
         "winningHands": [],
+        "format": "seven_card_stud",
         "steps": [
             {
                 "description": "Pay the ante"

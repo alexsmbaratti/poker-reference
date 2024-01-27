@@ -31,12 +31,12 @@ struct GameDetailView: View {
                     Heading(text: "Wild Cards")
                     CardBunchReferenceView(cardBunches: game.getAllWildCards())
                 }
+                Heading(text: "How to Play")
+                HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasWinningHands() {
                     Heading(text: "Winning Hands")
                     CardBunchReferenceView(cardBunches: game.winningHands)
                 }
-                Heading(text: "How to Play")
-                HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasVariants() {
                     Heading(text: "Variants")
                     VariantsView(variants: game.variants)

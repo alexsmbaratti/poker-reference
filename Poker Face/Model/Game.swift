@@ -15,6 +15,7 @@ struct Game: Identifiable, Hashable, Codable {
     var wildCards: [Card] = []
     var wildCustoms: [String] = []
     var winningHands: [CardBunch] = []
+    // TODO: Add special card values and behaviors
     var variants: [Variant] = []
     var format: GameFormat?
     

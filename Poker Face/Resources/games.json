@@ -110,15 +110,14 @@
                 "description": "All players are dealt one card face down"
             },
             {
-                "description": "All players are asked if they want a card",
-                "subtext": "This card is dealt face up."
+                "description": "All players are asked if they want a card or pass",
+                "subtext": "The dealt card will be dealt face up."
             },
             {
-                "description": "All players are asked if they want to bet or pass",
-                "subtext": "This is regardless of whether or not they took a card."
+                "description": "Play continues until one player has passed three times"
             },
             {
-                "description": "Play continues until a full round occurs without a card being dealt"
+                "description": "Each player reveals their hand and the players with hands closest to 7 or 27 wins"
             }
         ],
         "variants": []

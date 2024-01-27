@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
                 .listStyle(.inset)
             }
-            .navigationTitle("Poker Face")
+            .navigationTitle("Poker Reference")
             .toolbar {
                 ToolbarItem(placement: sizeClass == .compact ? .topBarLeading : .topBarTrailing, content: {
                     Button(action: {

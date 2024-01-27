@@ -64,6 +64,54 @@
     },
     {
         "id": 1,
+        "name": "Seven Card Stud",
+        "wildCards": [],
+        "wildRanks": [],
+        "wildCustoms": [],
+        "winningHands": [],
+        "format": "seven_card_stud",
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt three cards, two face down and one face up",
+                "subtext": "You may view your hand."
+            },
+            {
+                "description": "A round of betting occurs",
+                "subtext": "The player with the best hand showing starts the bet each round."
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one more card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face down"
+            },
+            {
+                "description": "Each player constructs a five card hand and the player with the best hand wins",
+                "offerQuickReference": true
+            }
+        ],
+        "variants": []
+    },
+    {
+        "id": 2,
         "name": "Baseball",
         "wildCards": [],
         "wildRanks": [ 3, 9 ],
@@ -75,14 +123,14 @@
                 "description": "Pay the ante"
             },
             {
-                "description": "All players are dealt two cards, two face down and one face up",
+                "description": "All players are dealt three cards, two face down and one face up",
                 "subtext": "You may view your hand."
             }
         ],
         "variants": []
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Football",
         "wildCards": [],
         "wildRanks": [ 3 ],
@@ -93,7 +141,7 @@
         "variants": []
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Screwball",
         "wildCards": [ {
             "rank": 13,
@@ -108,7 +156,7 @@
         "variants": []
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "727",
         "wildCards": [],
         "wildRanks": [],
@@ -189,7 +237,7 @@
         "variants": []
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Low Hole Roll Your Own",
         "wildCards": [],
         "wildRanks": [],
@@ -199,7 +247,7 @@
         "variants": []
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Follow the Queen",
         "wildCards": [],
         "wildRanks": [ 12 ],
@@ -210,7 +258,7 @@
         "variants": []
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Jack the Shifter",
         "wildCards": [],
         "wildRanks": [],
@@ -220,7 +268,7 @@
         "variants": []
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Twenty-One",
         "wildCards": [],
         "wildRanks": [],
@@ -272,7 +320,7 @@
         "variants": []
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "No Peekie",
         "wildCards": [],
         "wildRanks": [],

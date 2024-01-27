@@ -88,6 +88,7 @@
         "wildRanks": [ 3 ],
         "wildCustoms": [],
         "winningHands": [],
+        "format": "seven_card_stud",
         "steps": [],
         "variants": []
     },
@@ -102,6 +103,7 @@
         "wildRanks": [ 2, 11 ],
         "wildCustoms": [],
         "winningHands": [],
+        "format": "seven_card_stud",
         "steps": [],
         "variants": []
     },
@@ -203,6 +205,7 @@
         "wildRanks": [ 12 ],
         "wildCustoms": ["Any Card Following a Face Up Queen"],
         "winningHands": [],
+        "format": "seven_card_stud",
         "steps": [],
         "variants": []
     },
@@ -223,6 +226,38 @@
         "wildRanks": [],
         "wildCustoms": [],
         "winningHands": [],
+        "rankValues": [
+            {
+                "cards": [
+                    {
+                        "rank": 11,
+                        "suit": 4,
+                        "side": 1
+                    },
+                    {
+                        "rank": 12,
+                        "suit": 4,
+                        "side": 1
+                    },
+                    {
+                        "rank": 13,
+                        "suit": 4,
+                        "side": 1
+                    }
+                ],
+                "description": "½"
+            },
+            {
+                "cards": [
+                    {
+                        "rank": 1,
+                        "suit": 4,
+                        "side": 1
+                    }
+                ],
+                "description": "1 or 11"
+            }
+        ],
         "steps": [
             {
                 "description": "Pay the ante"

@@ -33,7 +33,7 @@ struct GameDetailView: View {
                     CardBunchReferenceView(cardBunches: game.getAllWildCards())
                 }
                 if game.hasRankValues() {
-                    Heading(text: "Rank Values")
+                    Heading(text: "Special Rank Values")
                     CardBunchReferenceView(cardBunches: game.rankValues!)
                 }
                 Heading(text: "How to Play")
@@ -47,7 +47,7 @@ struct GameDetailView: View {
                     VariantsView(variants: game.variants)
                 }
             }
-            .padding(.horizontal)
+            .padding([.leading, .bottom, .trailing])
         }
         .navigationTitle(game.name)
     }

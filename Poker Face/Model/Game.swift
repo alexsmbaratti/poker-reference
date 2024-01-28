@@ -77,11 +77,11 @@ enum GameFormat: String, Codable {
     var name: String {
         switch self {
         case .five_card_draw:
-            return "Five Card Draw"
+            return "Five-Card Draw"
         case .roll_your_own:
             return "Roll Your Own"
         case .seven_card_stud:
-            return "Seven Card Stud"
+            return "Seven-Card Stud"
         }
     }
 }

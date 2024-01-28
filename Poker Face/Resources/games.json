@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "Five Card Draw",
+        "name": "Five-Card Draw",
         "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
@@ -64,7 +64,7 @@
     },
     {
         "id": 1,
-        "name": "Seven Card Stud",
+        "name": "Seven-Card Stud",
         "wildCards": [],
         "wildRanks": [],
         "wildCustoms": [],
@@ -267,10 +267,10 @@
         "format": "seven_card_stud",
         "steps": [
             {
-                "description": "Play normal Seven Card Stud until a Jack is dealt face up"
+                "description": "Play normal Seven-Card Stud until a Jack is dealt face up"
             },
             {
-                "description": "Anytime a Jack is dealt face up, that player will choose any Seven Card Stud game to switch to"
+                "description": "Anytime a Jack is dealt face up, that player will choose any Seven-Card Stud game to switch to"
             }
         ],
         "variants": []

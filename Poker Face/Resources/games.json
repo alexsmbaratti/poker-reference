@@ -137,7 +137,15 @@
         "wildCustoms": [ "Sixes if paired with an Ace" ],
         "winningHands": [],
         "format": "seven_card_stud",
-        "steps": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt three cards, two face down and one face up",
+                "subtext": "You may view your hand."
+            }
+        ],
         "variants": []
     },
     {
@@ -152,7 +160,15 @@
         "wildCustoms": [],
         "winningHands": [],
         "format": "seven_card_stud",
-        "steps": [],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt three cards, two face down and one face up",
+                "subtext": "You may view your hand."
+            }
+        ],
         "variants": []
     },
     {

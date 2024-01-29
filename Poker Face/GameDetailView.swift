@@ -26,7 +26,7 @@ struct GameDetailView: View {
                             .italic()
                         Spacer()
                     }
-                    .padding(.bottom)
+                    Divider()
                 }
                 if game.hasWilds() {
                     Heading(text: "Wild Cards")

@@ -330,7 +330,7 @@ enum Hand: Int, CaseIterable {
     var description: String {
         switch self {
         case .royal_flush:
-            return "Five cards of the same suit in sequence"
+            return "The 10, Jack, Queen, King, and Ace of the same suit."
         case .straight_flush:
             return "Five cards of the same suit in sequence"
         case .four_of_a_kind:

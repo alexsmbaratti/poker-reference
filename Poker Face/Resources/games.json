@@ -217,7 +217,7 @@
         ],
         "winningHands": [
                 {
-                    "description": "Adds to 7 and 27",
+                    "description": "Adds to both 7 and 27",
                     "cards": [
                         {
                             "rank": 1,
@@ -242,18 +242,19 @@
                 "description": "Pay the ante"
             },
             {
-                "description": "All players are dealt one card face down"
+                "description": "Each player is dealt one card face down and one card face up",
+                "subtext": "You may view your hand."
             },
             {
-                "description": "All players are asked if they want a card or pass",
+                "description": "Each player is asked if they want a card or pass, starting with the player to the dealer's left",
                 "subtext": "The dealt card will be dealt face up."
             },
             {
-                "description": "Play continues until one player has passed three times"
+                "description": "Play continues until all players have passed consecutively"
             },
             {
                 "description": "Each player reveals their hand and the players with hands closest to 7 or 27 wins",
-                "subtext": "Closest refers to closest without going over."
+                "subtext": "Closest means the highest value without exceeding the target."
             }
         ],
         "variants": []

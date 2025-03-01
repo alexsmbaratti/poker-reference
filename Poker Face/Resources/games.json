@@ -378,5 +378,52 @@
                 "description": "Threes and nines are wild cards"
             }
         ]
+    },
+    {
+        "id": 11,
+        "name": "High Card",
+        "wildCards": [],
+        "wildRanks": [],
+        "wildCustoms": [],
+        "winningHands": [
+            {
+                "description": "Any Ace",
+                "cards": [
+                    {
+                        "rank": 1,
+                        "suit": 0,
+                        "side": 1
+                    },
+                    {
+                        "rank": 1,
+                        "suit": 1,
+                        "side": 1
+                    },
+                    {
+                        "rank": 1,
+                        "suit": 2,
+                        "side": 1
+                    },
+                    {
+                        "rank": 1,
+                        "suit": 3,
+                        "side": 1
+                    }
+                ]
+            }
+        ],
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "Each player is dealt one card face down",
+                "subtext": "You may not look at your card."
+            },
+            {
+                "description": "Each player reveals their card and the player with the highest-ranking card wins"
+            }
+        ],
+        "variants": []
     }
 ]

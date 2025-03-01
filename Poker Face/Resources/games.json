@@ -123,8 +123,14 @@
                 "description": "Pay the ante"
             },
             {
-                "description": "All players are dealt three cards, two face down and one face up",
-                "subtext": "You may view your hand."
+                "description": "All players are dealt two cards, one face down and one face up"
+            },
+            {
+                "description": "A round of betting occurs",
+                "subtext": "The player with the best hand showing starts the bet each round."
+            },
+            {
+                "description": "All players are dealt one card face up"
             }
         ],
         "variants": []

@@ -37,7 +37,7 @@ struct GameDetailView: View {
                     CardBunchReferenceView(cardBunches: game.rankValues!)
                 }
                 Heading(text: "How to Play")
-                HowToView(steps: game.steps, showQuickReference: $showQuickReference, openWindows: $openWindows)
+                HowToView(steps: game.steps, deferredFormat: game.deferToFormat ?? false ? game.format : nil, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasWinningHands() {
                     Heading(text: "Winning Hands")
                     CardBunchReferenceView(cardBunches: game.winningHands)
@@ -55,19 +55,39 @@ struct GameDetailView: View {
 
 struct HowToView: View {
     var steps: [Instruction]
+    var deferredFormat: GameFormat?
+    
+    @State var collapseDeferredSteps = true
     
     @Binding var showQuickReference: Bool
     @Binding var openWindows: Set<String>
     
     var body: some View {
         if !steps.isEmpty {
-            if steps.count == 1 && steps.first!.description == "defer_to_format" {
+            if deferredFormat != nil && collapseDeferredSteps {
                 HStack {
                     Spacer()
-                    Text("See Format")
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .foregroundColor(.secondary)
+                    VStack {
+                        Text("Play Standard \(deferredFormat!.name)")
+                            .font(.title)
+                            .fontWeight(.medium)
+                            .foregroundColor(.secondary)
+                        Button(action: {
+                            collapseDeferredSteps = false
+                        }) {
+                            Label("Show Steps", systemImage: "list.bullet")
+                                .fontWeight(.semibold)
+                                .font(.headline)
+                                .padding()
+#if !os(visionOS)
+                                .foregroundColor(.white) // Needed to prevent green text on iOS
+                                .background(.primary) // Needed to give button accent color on iOS
+#else
+                                .backgroundStyle(.primary)
+#endif
+                                .cornerRadius(20)
+                        }
+                    }
                     Spacer()
                 }
                 .padding(.all)

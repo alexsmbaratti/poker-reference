@@ -19,6 +19,7 @@ struct Game: Identifiable, Hashable, Codable {
     // TODO: Add special card values and behaviors
     var variants: [Variant] = []
     var format: GameFormat?
+    var deferToFormat: Bool?
     
     func hasWilds() -> Bool {
         return !wildCards.isEmpty || !wildRanks.isEmpty || !wildCustoms.isEmpty

@@ -140,7 +140,7 @@
                         "side": 1
                     }
                 ],
-                "description": "4s Get Another Card for a Price"
+                "description": "Fours Get Another Card for a Price"
             }
         ],
         "winningHands": [],
@@ -217,7 +217,7 @@
                         "side": 1
                     }
                 ],
-                "description": "10s Get Another Card for a Price"
+                "description": "Tens Get Another Card for a Price"
             }
         ],
         "format": "seven_card_stud",
@@ -274,7 +274,7 @@
         "wildCustoms": [],
         "winningHands": [
             {
-                "description": "Any Pair of Natural 7s",
+                "description": "Any Pair of Natural Sevens",
                 "cards": [
                     {
                         "rank": 7,

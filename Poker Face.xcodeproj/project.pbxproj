@@ -20,6 +20,7 @@
 		FABCA53E2D74E74800CE57F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB98294AE6BE00B7B1D1 /* Game.swift */; };
 		FABCA53F2D74E74D00CE57F8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FABCA5402D74E75200CE57F8 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
+		FABCA5412D74E84400CE57F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319B29467EA100B9F75C /* ContentView.swift */; };
 		FAD893DA2953F46200B3C871 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
 		FAD893DD2953F4A100B3C871 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FAEF319A29467EA100B9F75C /* Poker_FaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */; };
@@ -387,6 +388,7 @@
 			files = (
 				FABCA53B2D74E72000CE57F8 /* GameDetailView.swift in Sources */,
 				FABCA53E2D74E74800CE57F8 /* Game.swift in Sources */,
+				FABCA5412D74E84400CE57F8 /* ContentView.swift in Sources */,
 				FABCA53D2D74E72900CE57F8 /* Card.swift in Sources */,
 				FABCA53C2D74E72500CE57F8 /* QuickReferenceView.swift in Sources */,
 				FABCA53F2D74E74D00CE57F8 /* ModelData.swift in Sources */,

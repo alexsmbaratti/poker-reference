@@ -326,19 +326,9 @@
         "variants": [
             {
                 "name": "Give Peace a Chance",
-                "description": "Play continues until all players have passed consecutively, instead of one player passing three times"
+                "description": "Play continues until all players have passed consecutively, instead of one player passing three times."
             }
         ]
-    },
-    {
-        "id": 6,
-        "name": "Low Hole Roll Your Own",
-        "wildCards": [],
-        "wildRanks": [],
-        "wildCustoms": [],
-        "winningHands": [],
-        "steps": [],
-        "variants": []
     },
     {
         "id": 7,
@@ -365,58 +355,6 @@
             },
             {
                 "description": "Anytime a Jack is dealt face up, that player will choose any Seven-Card Stud game to switch to"
-            }
-        ],
-        "variants": []
-    },
-    {
-        "id": 9,
-        "name": "Twenty-One",
-        "wildCards": [],
-        "wildRanks": [],
-        "wildCustoms": [],
-        "winningHands": [],
-        "rankValues": [
-            {
-                "cards": [
-                    {
-                        "rank": 11,
-                        "suit": 4,
-                        "side": 1
-                    },
-                    {
-                        "rank": 12,
-                        "suit": 4,
-                        "side": 1
-                    },
-                    {
-                        "rank": 13,
-                        "suit": 4,
-                        "side": 1
-                    }
-                ],
-                "description": "½"
-            },
-            {
-                "cards": [
-                    {
-                        "rank": 1,
-                        "suit": 4,
-                        "side": 1
-                    }
-                ],
-                "description": "1 or 11"
-            }
-        ],
-        "steps": [
-            {
-                "description": "Pay the ante"
-            },
-            {
-                "description": "All players are dealt one card face down and one card face up"
-            },
-            {
-                "description": "Each player can ask for more cards"
             }
         ],
         "variants": []

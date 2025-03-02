@@ -164,7 +164,23 @@
         }],
         "wildRanks": [ 2, 11 ],
         "wildCustoms": [],
-        "winningHands": [],
+        "winningHands": [
+            {
+                "description": "Any Pair of Natural 7s",
+                "cards": [
+                    {
+                        "rank": 7,
+                        "suit": 1,
+                        "side": 1
+                    },
+                    {
+                        "rank": 7,
+                        "suit": 2,
+                        "side": 1
+                    }
+                ]
+            }
+        ],
         "format": "seven_card_stud",
         "steps": [
             {

@@ -21,6 +21,7 @@
 		FABCA53F2D74E74D00CE57F8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FABCA5402D74E75200CE57F8 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
 		FABCA5412D74E84400CE57F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319B29467EA100B9F75C /* ContentView.swift */; };
+		FABCA5422D74E8B100CE57F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEF319D29467EA200B9F75C /* Assets.xcassets */; };
 		FAD893DA2953F46200B3C871 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
 		FAD893DD2953F4A100B3C871 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FAEF319A29467EA100B9F75C /* Poker_FaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */; };
@@ -347,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCA5422D74E8B100CE57F8 /* Assets.xcassets in Resources */,
 				FABCA5402D74E75200CE57F8 /* games.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +477,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Poker Face watchOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.alexsmbaratti.Poker-Face";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,7 +512,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Poker Face watchOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.alexsmbaratti.Poker-Face";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,6 +547,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,6 +581,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,6 +14,12 @@
 		FABCA4492D74D55400CE57F8 /* Poker Face watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FABCA44E2D74D5C200CE57F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
 		FABCA44F2D74D68C00CE57F8 /* QuickReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */; };
+		FABCA53B2D74E72000CE57F8 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
+		FABCA53C2D74E72500CE57F8 /* QuickReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */; };
+		FABCA53D2D74E72900CE57F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
+		FABCA53E2D74E74800CE57F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB98294AE6BE00B7B1D1 /* Game.swift */; };
+		FABCA53F2D74E74D00CE57F8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
+		FABCA5402D74E75200CE57F8 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
 		FAD893DA2953F46200B3C871 /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = FAD893D92953F46200B3C871 /* games.json */; };
 		FAD893DD2953F4A100B3C871 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD893DC2953F4A100B3C871 /* ModelData.swift */; };
 		FAEF319A29467EA100B9F75C /* Poker_FaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */; };
@@ -340,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCA5402D74E75200CE57F8 /* games.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCA53B2D74E72000CE57F8 /* GameDetailView.swift in Sources */,
+				FABCA53E2D74E74800CE57F8 /* Game.swift in Sources */,
+				FABCA53D2D74E72900CE57F8 /* Card.swift in Sources */,
+				FABCA53C2D74E72500CE57F8 /* QuickReferenceView.swift in Sources */,
+				FABCA53F2D74E74D00CE57F8 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

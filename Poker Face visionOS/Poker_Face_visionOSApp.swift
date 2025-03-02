@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct Poker_Face_visionOSApp: App {
+    @State var openWindows: Set<String> = []
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(openWindows: $openWindows)
+                .frame(minWidth: 850, minHeight: 850)
         }
+        .windowResizability(.contentSize)
+
+        WindowGroup(id: "quick-reference") {
+            QuickReferenceView(isShowing: .constant(true))
+                .frame(minWidth: 600, maxWidth: 600, minHeight: 600)
+                .onDisappear(perform: {
+                    openWindows.remove("quick-reference")
+                })
+        }
+        .windowResizability(.contentSize)
     }
 }

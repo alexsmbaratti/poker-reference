@@ -61,6 +61,7 @@
 		FAB4FB98294AE6BE00B7B1D1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABCA5272D74E66200CE57F8 /* Poker Face visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD893D92953F46200B3C871 /* games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = games.json; sourceTree = "<group>"; };
 		FAD893DC2953F4A100B3C871 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		FAEF319629467EA100B9F75C /* Poker Face.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +73,19 @@
 		FAEF31A929467FCA00B9F75C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FABCA5372D74E66300CE57F8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FABCA5262D74E66200CE57F8 /* Poker Face visionOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Poker Face watchOS Watch App"; sourceTree = "<group>"; };
+		FABCA5282D74E66200CE57F8 /* Poker Face visionOS */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FABCA5372D74E66300CE57F8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Poker Face visionOS"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FABCA4392D74D55300CE57F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABCA5242D74E66200CE57F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,6 +151,7 @@
 				FAEF319829467EA100B9F75C /* Poker Face */,
 				FAB4FB8B294ACED600B7B1D1 /* Poker FaceTests */,
 				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
+				FABCA5282D74E66200CE57F8 /* Poker Face visionOS */,
 				FAEF319729467EA100B9F75C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +162,7 @@
 				FAEF319629467EA100B9F75C /* Poker Face.app */,
 				FAB4FB8A294ACED600B7B1D1 /* Poker FaceTests.xctest */,
 				FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */,
+				FABCA5272D74E66200CE57F8 /* Poker Face visionOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +234,28 @@
 			productReference = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FABCA5262D74E66200CE57F8 /* Poker Face visionOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABCA5382D74E66300CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face visionOS" */;
+			buildPhases = (
+				FABCA5232D74E66200CE57F8 /* Sources */,
+				FABCA5242D74E66200CE57F8 /* Frameworks */,
+				FABCA5252D74E66200CE57F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FABCA5282D74E66200CE57F8 /* Poker Face visionOS */,
+			);
+			name = "Poker Face visionOS";
+			packageProductDependencies = (
+			);
+			productName = "Poker Face visionOS";
+			productReference = FABCA5272D74E66200CE57F8 /* Poker Face visionOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FAEF319529467EA100B9F75C /* Poker Face */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEF31A429467EA200B9F75C /* Build configuration list for PBXNativeTarget "Poker Face" */;
@@ -249,6 +292,9 @@
 					FABCA43B2D74D55300CE57F8 = {
 						CreatedOnToolsVersion = 16.2;
 					};
+					FABCA5262D74E66200CE57F8 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					FAEF319529467EA100B9F75C = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -270,6 +316,7 @@
 				FAEF319529467EA100B9F75C /* Poker Face */,
 				FAB4FB89294ACED600B7B1D1 /* Poker FaceTests */,
 				FABCA43B2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
+				FABCA5262D74E66200CE57F8 /* Poker Face visionOS */,
 			);
 		};
 /* End PBXProject section */
@@ -283,6 +330,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FABCA43A2D74D55300CE57F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABCA5252D74E66200CE57F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,6 +371,13 @@
 			files = (
 				FABCA44E2D74D5C200CE57F8 /* Card.swift in Sources */,
 				FABCA44F2D74D68C00CE57F8 /* QuickReferenceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABCA5232D74E66200CE57F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +513,71 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		FABCA5392D74E66300CE57F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Poker Face visionOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F83W36QSV;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsmbaratti.Poker-Face-visionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		FABCA53A2D74E66300CE57F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Poker Face visionOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F83W36QSV;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsmbaratti.Poker-Face-visionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -594,12 +720,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsmbaratti.Poker-Face";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -628,12 +754,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsmbaratti.Poker-Face";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -654,6 +780,15 @@
 			buildConfigurations = (
 				FABCA44B2D74D55400CE57F8 /* Debug */,
 				FABCA44C2D74D55400CE57F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABCA5382D74E66300CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face visionOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABCA5392D74E66300CE57F8 /* Debug */,
+				FABCA53A2D74E66300CE57F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

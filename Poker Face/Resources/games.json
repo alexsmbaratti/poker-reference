@@ -116,6 +116,33 @@
         "wildCards": [],
         "wildRanks": [ 3, 9 ],
         "wildCustoms": [],
+        "rankValues": [
+            {
+                "cards": [
+                    {
+                        "rank": 4,
+                        "suit": 0,
+                        "side": 1
+                    },
+                    {
+                        "rank": 4,
+                        "suit": 1,
+                        "side": 1
+                    },
+                    {
+                        "rank": 4,
+                        "suit": 2,
+                        "side": 1
+                    },
+                    {
+                        "rank": 4,
+                        "suit": 3,
+                        "side": 1
+                    }
+                ],
+                "description": "4s Get Another Card for a Price"
+            }
+        ],
         "winningHands": [],
         "format": "seven_card_stud",
         "steps": [
@@ -142,6 +169,33 @@
         "wildRanks": [ 4 ],
         "wildCustoms": [ "Sixes if paired with an Ace" ],
         "winningHands": [],
+        "rankValues": [
+            {
+                "cards": [
+                    {
+                        "rank": 10,
+                        "suit": 0,
+                        "side": 1
+                    },
+                    {
+                        "rank": 10,
+                        "suit": 1,
+                        "side": 1
+                    },
+                    {
+                        "rank": 10,
+                        "suit": 2,
+                        "side": 1
+                    },
+                    {
+                        "rank": 10,
+                        "suit": 3,
+                        "side": 1
+                    }
+                ],
+                "description": "10s Get Another Card for a Price"
+            }
+        ],
         "format": "seven_card_stud",
         "steps": [
             {
@@ -184,11 +238,7 @@
         "format": "seven_card_stud",
         "steps": [
             {
-                "description": "Pay the ante"
-            },
-            {
-                "description": "All players are dealt three cards, two face down and one face up",
-                "subtext": "You may view your hand."
+                "description": "defer_to_format"
             }
         ],
         "variants": []
@@ -266,14 +316,19 @@
                 "subtext": "The dealt card will be dealt face up."
             },
             {
-                "description": "Play continues until all players have passed consecutively"
+                "description": "Play continues until one player has passed three times"
             },
             {
                 "description": "Each player reveals their hand and the players with hands closest to 7 or 27 wins",
                 "subtext": "Closest means the highest value without exceeding the target."
             }
         ],
-        "variants": []
+        "variants": [
+            {
+                "name": "Give Peace a Chance",
+                "description": "Play continues until all players have passed consecutively, instead of one player passing three times"
+            }
+        ]
     },
     {
         "id": 6,

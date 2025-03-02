@@ -61,18 +61,36 @@ struct HowToView: View {
     
     var body: some View {
         if !steps.isEmpty {
-            VStack {
-                ForEach(0..<steps.count, id: \.self) { index in
-                    StepView(num: index + 1, step: steps[index], showQuickReference: $showQuickReference, openWindows: $openWindows)
+            if steps.count == 1 && steps.first!.description == "defer_to_format" {
+                HStack {
+                    Spacer()
+                    Text("See Format")
+                        .font(.title)
+                        .fontWeight(.medium)
+                        .foregroundColor(.secondary)
+                    Spacer()
                 }
+                .padding(.all)
+                .aspectRatio(contentMode: .fill)
+                .background(
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .foregroundColor(Color(.systemFill))
+                        .shadow(radius: 7)
+                )
+            } else {
+                VStack {
+                    ForEach(0..<steps.count, id: \.self) { index in
+                        StepView(num: index + 1, step: steps[index], showQuickReference: $showQuickReference, openWindows: $openWindows)
+                    }
+                }
+                .padding(.all)
+                .aspectRatio(contentMode: .fill)
+                .background(
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .foregroundColor(Color(.systemFill))
+                        .shadow(radius: 7)
+                )
             }
-            .padding(.all)
-            .aspectRatio(contentMode: .fill)
-            .background(
-                RoundedRectangle(cornerRadius: 4, style: .continuous)
-                    .foregroundColor(Color(.systemFill))
-                    .shadow(radius: 7)
-            )
         } else {
             HStack {
                 Spacer()

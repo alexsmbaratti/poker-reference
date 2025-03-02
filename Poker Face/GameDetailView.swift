@@ -69,7 +69,7 @@ struct HowToView: View {
                     Spacer()
                     VStack {
                         Text("Play Standard \(deferredFormat!.name)")
-                            .font(.title)
+                            .font(.headline)
                             .fontWeight(.medium)
                             .foregroundColor(.secondary)
                         Button(action: {

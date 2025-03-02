@@ -150,7 +150,8 @@
                 "description": "Pay the ante"
             },
             {
-                "description": "All players are dealt two cards, one face down and one face up"
+                "description": "All players are dealt three cards, two face down and one face up",
+                "subtext": "You may view your hand."
             },
             {
                 "description": "A round of betting occurs",
@@ -158,9 +159,32 @@
             },
             {
                 "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one more card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face down"
+            },
+            {
+                "description": "Each player constructs a five card hand and the player with the best hand wins",
+                "offerQuickReference": true
             }
         ],
-        "variants": []
+        "variants": [],
+        "deferToFormat": true
     },
     {
         "id": 3,
@@ -204,9 +228,39 @@
             {
                 "description": "All players are dealt three cards, two face down and one face up",
                 "subtext": "You may view your hand."
+            },
+            {
+                "description": "A round of betting occurs",
+                "subtext": "The player with the best hand showing starts the bet each round."
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one more card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face down"
+            },
+            {
+                "description": "Each player constructs a five card hand and the player with the best hand wins",
+                "offerQuickReference": true
             }
         ],
-        "variants": []
+        "variants": [],
+        "deferToFormat": true
     },
     {
         "id": 4,
@@ -369,11 +423,49 @@
         "name": "Follow the Queen",
         "wildCards": [],
         "wildRanks": [ 12 ],
-        "wildCustoms": ["Any Card Following a Face Up Queen"],
+        "wildCustoms": ["Any Card Following the Last Face Up Queen"],
         "winningHands": [],
         "format": "seven_card_stud",
-        "steps": [],
-        "variants": []
+        "steps": [
+            {
+                "description": "Pay the ante"
+            },
+            {
+                "description": "All players are dealt three cards, two face down and one face up",
+                "subtext": "You may view your hand."
+            },
+            {
+                "description": "A round of betting occurs",
+                "subtext": "The player with the best hand showing starts the bet each round."
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one more card face up"
+            },
+            {
+                "description": "A round of betting occurs"
+            },
+            {
+                "description": "All players are dealt one card face down"
+            },
+            {
+                "description": "Each player constructs a five card hand and the player with the best hand wins",
+                "offerQuickReference": true
+            }
+        ],
+        "variants": [],
+        "deferToFormat": true
     },
     {
         "id": 8,
@@ -385,42 +477,13 @@
         "format": "seven_card_stud",
         "steps": [
             {
-                "description": "Play normal Seven-Card Stud until a Jack is dealt face up"
+                "description": "Play standard Seven-Card Stud until a Jack is dealt face up"
             },
             {
                 "description": "Anytime a Jack is dealt face up, that player will choose any Seven-Card Stud game to switch to"
             }
         ],
         "variants": []
-    },
-    {
-        "id": 10,
-        "name": "No Peekie",
-        "wildCards": [],
-        "wildRanks": [],
-        "wildCustoms": [],
-        "winningHands": [],
-        "steps": [
-            {
-                "description": "Pay the ante"
-            },
-            {
-                "description": "All players are dealt seven cards face down",
-                "subtext": "You may not look at your hand."
-            },
-            {
-                "description": "The player to the dealer's left flips one of their cards face up"
-            },
-            {
-                "description": "A round of betting occurs"
-            }
-        ],
-        "variants": [
-            {
-                "name": "Midnight Baseball",
-                "description": "Threes and nines are wild cards"
-            }
-        ]
     },
     {
         "id": 11,

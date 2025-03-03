@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Poker Face watchOS Watch App
+//  Poker Face watchOS
 //
 //  Created by Alex Baratti on 3/2/25.
 //

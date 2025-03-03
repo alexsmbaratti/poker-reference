@@ -92,7 +92,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Poker Face watchOS Watch App"; sourceTree = "<group>"; };
+		FABCA43D2D74D55300CE57F8 /* Poker Face watchOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Poker Face watchOS"; sourceTree = "<group>"; };
 		FABCA5282D74E66200CE57F8 /* Poker Face visionOS */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FABCA5372D74E66300CE57F8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Poker Face visionOS"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -158,7 +158,7 @@
 			children = (
 				FAEF319829467EA100B9F75C /* Poker Face */,
 				FAB4FB8B294ACED600B7B1D1 /* Poker FaceTests */,
-				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
+				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS */,
 				FABCA5282D74E66200CE57F8 /* Poker Face visionOS */,
 				FAEF319729467EA100B9F75C /* Products */,
 			);
@@ -233,7 +233,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
+				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS */,
 			);
 			name = "Poker Face watchOS";
 			packageProductDependencies = (
@@ -471,7 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poker Face watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Poker Face watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3F83W36QSV;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -506,7 +506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poker Face watchOS Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Poker Face watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3F83W36QSV;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;

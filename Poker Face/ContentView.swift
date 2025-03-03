@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var showQuickReference = false
     @State var selectedGame: Game? = nil
+    
     @AppStorage("hasSeenDisclaimer") private var hasSeenDisclaimer: Bool = false
     @State private var showDisclaimer = false
     
@@ -117,6 +118,7 @@ struct DisclaimerView: View {
                 hasSeenDisclaimer = true
                 isPresented = false
             }
+            .font(.title3)
             .bold()
             .buttonStyle(.borderedProminent)
             .padding()

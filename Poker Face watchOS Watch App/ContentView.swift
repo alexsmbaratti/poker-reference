@@ -19,7 +19,7 @@ struct HandsView: View {
             VStack(spacing: 16) {
                 ForEach(Hand.allCases, id: \.rawValue) { hand in
                     VStack {
-                        CardStackView(cards: hand.exampleHand)
+                        CardStackView(cards: hand.exampleHand) // TODO: Fit screen size
                         Text(hand.name)
                             .font(.headline)
                             .foregroundStyle(.gray)

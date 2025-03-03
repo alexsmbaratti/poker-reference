@@ -11,7 +11,7 @@
 		FAB4FB95294ACF0400B7B1D1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
 		FAB4FB99294AE6BE00B7B1D1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB98294AE6BE00B7B1D1 /* Game.swift */; };
 		FAB4FB9B294AE85B00B7B1D1 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
-		FABCA4492D74D55400CE57F8 /* Poker Face watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FABCA4492D74D55400CE57F8 /* Poker Face watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FABCA44E2D74D5C200CE57F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
 		FABCA44F2D74D68C00CE57F8 /* QuickReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */; };
 		FABCA53B2D74E72000CE57F8 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
@@ -56,7 +56,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				FABCA4492D74D55400CE57F8 /* Poker Face watchOS Watch App.app in Embed Watch Content */,
+				FABCA4492D74D55400CE57F8 /* Poker Face watchOS.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 		FAB4FB93294ACEE000B7B1D1 /* CardUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtilsTests.swift; sourceTree = "<group>"; };
 		FAB4FB98294AE6BE00B7B1D1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
-		FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABCA43C2D74D55300CE57F8 /* Poker Face watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCA5272D74E66200CE57F8 /* Poker Face visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poker Face visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD893D92953F46200B3C871 /* games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = games.json; sourceTree = "<group>"; };
 		FAD893DC2953F4A100B3C871 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			children = (
 				FAEF319629467EA100B9F75C /* Poker Face.app */,
 				FAB4FB8A294ACED600B7B1D1 /* Poker FaceTests.xctest */,
-				FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */,
+				FABCA43C2D74D55300CE57F8 /* Poker Face watchOS.app */,
 				FABCA5272D74E66200CE57F8 /* Poker Face visionOS.app */,
 			);
 			name = Products;
@@ -220,9 +220,9 @@
 			productReference = FAB4FB8A294ACED600B7B1D1 /* Poker FaceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FABCA43B2D74D55300CE57F8 /* Poker Face watchOS Watch App */ = {
+		FABCA43B2D74D55300CE57F8 /* Poker Face watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FABCA44D2D74D55400CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face watchOS Watch App" */;
+			buildConfigurationList = FABCA44D2D74D55400CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face watchOS" */;
 			buildPhases = (
 				FABCA4382D74D55300CE57F8 /* Sources */,
 				FABCA4392D74D55300CE57F8 /* Frameworks */,
@@ -235,11 +235,11 @@
 			fileSystemSynchronizedGroups = (
 				FABCA43D2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
 			);
-			name = "Poker Face watchOS Watch App";
+			name = "Poker Face watchOS";
 			packageProductDependencies = (
 			);
 			productName = "Poker Face watchOS Watch App";
-			productReference = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS Watch App.app */;
+			productReference = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FABCA5262D74E66200CE57F8 /* Poker Face visionOS */ = {
@@ -323,7 +323,7 @@
 			targets = (
 				FAEF319529467EA100B9F75C /* Poker Face */,
 				FAB4FB89294ACED600B7B1D1 /* Poker FaceTests */,
-				FABCA43B2D74D55300CE57F8 /* Poker Face watchOS Watch App */,
+				FABCA43B2D74D55300CE57F8 /* Poker Face watchOS */,
 				FABCA5262D74E66200CE57F8 /* Poker Face visionOS */,
 			);
 		};
@@ -421,7 +421,7 @@
 		};
 		FABCA4482D74D55400CE57F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FABCA43B2D74D55300CE57F8 /* Poker Face watchOS Watch App */;
+			target = FABCA43B2D74D55300CE57F8 /* Poker Face watchOS */;
 			targetProxy = FABCA4472D74D55400CE57F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -793,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FABCA44D2D74D55400CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face watchOS Watch App" */ = {
+		FABCA44D2D74D55400CE57F8 /* Build configuration list for PBXNativeTarget "Poker Face watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FABCA44B2D74D55400CE57F8 /* Debug */,

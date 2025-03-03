@@ -52,6 +52,7 @@ struct ContentView: View {
                     .disabled(openWindows.contains("quick-reference"))
 #endif
                 })
+                // TODO: Pick random game
             }
         }, detail: {
             if selectedGame != nil {

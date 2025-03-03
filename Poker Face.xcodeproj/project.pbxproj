@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA66D1842D7579820047B07C /* Poker-Face-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Poker-Face-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FAB4FB8A294ACED600B7B1D1 /* Poker FaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poker FaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB4FB93294ACEE000B7B1D1 /* CardUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtilsTests.swift; sourceTree = "<group>"; };
 		FAB4FB98294AE6BE00B7B1D1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -81,7 +82,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FABCA5372D74E66300CE57F8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		FABCA5372D74E66300CE57F8 /* Exceptions for "Poker Face visionOS" folder in "Poker Face visionOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -91,8 +92,19 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FABCA43D2D74D55300CE57F8 /* Poker Face watchOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Poker Face watchOS"; sourceTree = "<group>"; };
-		FABCA5282D74E66200CE57F8 /* Poker Face visionOS */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FABCA5372D74E66300CE57F8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Poker Face visionOS"; sourceTree = "<group>"; };
+		FABCA43D2D74D55300CE57F8 /* Poker Face watchOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Poker Face watchOS";
+			sourceTree = "<group>";
+		};
+		FABCA5282D74E66200CE57F8 /* Poker Face visionOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FABCA5372D74E66300CE57F8 /* Exceptions for "Poker Face visionOS" folder in "Poker Face visionOS" target */,
+			);
+			path = "Poker Face visionOS";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 		FAEF319829467EA100B9F75C /* Poker Face */ = {
 			isa = PBXGroup;
 			children = (
+				FA66D1842D7579820047B07C /* Poker-Face-Info.plist */,
 				FAD893DB2953F47400B3C871 /* Model */,
 				FAD893D82953F45700B3C871 /* Resources */,
 				FAEF319929467EA100B9F75C /* Poker_FaceApp.swift */,
@@ -308,7 +321,6 @@
 				};
 			};
 			buildConfigurationList = FAEF319129467EA100B9F75C /* Build configuration list for PBXProject "Poker Face" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -316,6 +328,7 @@
 				Base,
 			);
 			mainGroup = FAEF318D29467EA100B9F75C;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = FAEF319729467EA100B9F75C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -722,6 +735,7 @@
 				DEVELOPMENT_TEAM = 3F83W36QSV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poker-Face-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -756,6 +770,7 @@
 				DEVELOPMENT_TEAM = 3F83W36QSV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poker-Face-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Poker Reference";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -13,7 +13,6 @@
 		FAB4FB9B294AE85B00B7B1D1 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
 		FABCA4492D74D55400CE57F8 /* Poker Face watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FABCA43C2D74D55300CE57F8 /* Poker Face watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FABCA44E2D74D5C200CE57F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
-		FABCA44F2D74D68C00CE57F8 /* QuickReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */; };
 		FABCA53B2D74E72000CE57F8 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4FB9A294AE85B00B7B1D1 /* GameDetailView.swift */; };
 		FABCA53C2D74E72500CE57F8 /* QuickReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A729467EB900B9F75C /* QuickReferenceView.swift */; };
 		FABCA53D2D74E72900CE57F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF31A929467FCA00B9F75C /* Card.swift */; };
@@ -380,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABCA44E2D74D5C200CE57F8 /* Card.swift in Sources */,
-				FABCA44F2D74D68C00CE57F8 /* QuickReferenceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ struct ContentView: View {
 struct HandsView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 16) {
+            VStack {
                 ForEach(Hand.allCases, id: \.rawValue) { hand in
                     VStack {
                         TinyCardStackView(cards: hand.exampleHand)
@@ -27,7 +27,6 @@ struct HandsView: View {
                     .padding(.horizontal)
                 }
             }
-            .padding(.vertical)
         }
     }
 }

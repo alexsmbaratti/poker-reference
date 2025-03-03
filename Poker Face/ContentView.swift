@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var showQuickReference = false
     @State var selectedGame: Game? = nil
+    @AppStorage("hasSeenDisclaimer") private var hasSeenDisclaimer: Bool = false
+    @State private var showDisclaimer = false
     
     @Binding var openWindows: Set<String>
     
@@ -32,6 +34,11 @@ struct ContentView: View {
                     }
                 }
                 .listStyle(.inset)
+            }
+            .onAppear {
+                if !hasSeenDisclaimer {
+                    showDisclaimer = true
+                }
             }
             .navigationTitle("Poker Reference")
             .toolbar {
@@ -78,11 +85,50 @@ struct ContentView: View {
             QuickReferenceView(isShowing: $showQuickReference)
         })
 #endif
+        .sheet(isPresented: $showDisclaimer) {
+            DisclaimerView(isPresented: $showDisclaimer)
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(openWindows: .constant([]))
+struct DisclaimerView: View {
+    @AppStorage("hasSeenDisclaimer") private var hasSeenDisclaimer: Bool = false
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            Image(systemName: "info.bubble")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+            
+            Text("Disclaimer")
+                .font(.largeTitle)
+                .bold()
+                .multilineTextAlignment(.center)
+            
+            Text("This app is purely for educational purposes. This app does not facilitate gambling or real-money transactions. All content is purely for learning and practicing poker strategies in a risk-free environment. Please play responsibly.")
+                .multilineTextAlignment(.leading)
+                .padding()
+            
+            Spacer()
+            Button("Acknowledge") {
+                hasSeenDisclaimer = true
+                isPresented = false
+            }
+            .bold()
+            .buttonStyle(.borderedProminent)
+            .padding()
+        }
+        .interactiveDismissDisabled()
     }
+}
+
+#Preview {
+    ContentView(openWindows: .constant([]))
+}
+
+#Preview {
+    DisclaimerView(isPresented: .constant(true))
 }

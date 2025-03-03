@@ -29,6 +29,12 @@ struct QuickReferenceView: View {
                     })
                 })
             }
+            .onAppear {
+                UIApplication.shared.isIdleTimerDisabled = true
+            }
+            .onDisappear {
+                UIApplication.shared.isIdleTimerDisabled = false
+            }
 #endif
             .padding(.horizontal)
             .navigationTitle("Quick Reference")

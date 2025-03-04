@@ -200,6 +200,8 @@ struct VariantView: View {
             }
             HStack {
                 Text(variant.description)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
                 Spacer()
             }
@@ -323,7 +325,7 @@ struct StepView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildRanks: [.seven, .nine], wildCards: [Card(rank: .queen, suit: .heart)], wildCustoms: ["Some Wild Cards"], winningHands: [CardBunch(description: "Adds to 5", cards: [Card(rank: .three, suit: .wild), Card(rank: .two, suit: .wild)])], rankValues: [CardBunch(description: "11", cards: [Card(rank: .ace, suit: .heart)])], variants: [Variant(name: "My Variant", description: "Description")], format: .five_card_draw), showQuickReference: .constant(false), openWindows: .constant([]))
+            GameDetailView(game: Game(name: "My Poker Game", steps: [Instruction(description: "First", subtext: "Subtext"), Instruction(description: "Second"), Instruction(description: "Third", subtext: "Subtext", offerQuickReference: true)], wildRanks: [.seven, .nine], wildCards: [Card(rank: .queen, suit: .heart)], wildCustoms: ["Some Wild Cards"], winningHands: [CardBunch(description: "Adds to 5", cards: [Card(rank: .three, suit: .wild), Card(rank: .two, suit: .wild)])], rankValues: [CardBunch(description: "11", cards: [Card(rank: .ace, suit: .heart)])], variants: [Variant(name: "My Variant", description: "Instead of doing foo, jump five times, then bar")], format: .five_card_draw), showQuickReference: .constant(false), openWindows: .constant([]))
         }
     }
 }

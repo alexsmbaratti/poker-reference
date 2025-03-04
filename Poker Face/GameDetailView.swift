@@ -36,12 +36,12 @@ struct GameDetailView: View {
                     Heading(text: "Special Rank Values")
                     CardBunchReferenceView(cardBunches: game.rankValues!)
                 }
-                Heading(text: "How to Play")
-                HowToView(steps: game.steps, deferredFormat: game.deferToFormat ?? false ? game.format : nil, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasWinningHands() {
                     Heading(text: "Winning Hands")
                     CardBunchReferenceView(cardBunches: game.winningHands)
                 }
+                Heading(text: "How to Play")
+                HowToView(steps: game.steps, deferredFormat: game.deferToFormat ?? false ? game.format : nil, showQuickReference: $showQuickReference, openWindows: $openWindows)
                 if game.hasVariants() {
                     Heading(text: "Variants")
                     VariantsView(variants: game.variants)

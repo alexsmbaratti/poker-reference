@@ -26,6 +26,6 @@ jobs:
           xcodebuild clean test \
             -project "Poker Face.xcodeproj" \
             -scheme "Poker Face" \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.1' \
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
             ONLY_ACTIVE_ARCH=NO

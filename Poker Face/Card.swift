@@ -13,6 +13,10 @@ class CardUtils {
         return cards.dropFirst().allSatisfy({ $0.suit == cards.first?.suit })
     }
     
+    static func allOfSameRank(cards: [Card]) -> Bool {
+        return cards.dropFirst().allSatisfy({ $0.rank == cards.first?.rank })
+    }
+    
     static func containsRank(rank: Rank, cards: [Card]) -> Bool {
         return !cards.filter({ $0.rank == rank }).isEmpty
     }

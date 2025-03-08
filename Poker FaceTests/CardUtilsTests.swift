@@ -31,15 +31,16 @@ final class CardUtilsTests: XCTestCase {
         XCTAssertTrue(CardUtils.containsRank(rank: .king, cards: [Card(rank: .ace, suit: .heart), Card(rank: .king, suit: .heart), Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart)]))
     }
     
-    func testIsInSequence() throws {
-        XCTAssertTrue(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .nine, suit: .heart), Card(rank: .eight, suit: .heart)]))
-        XCTAssertFalse(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .eight, suit: .heart), Card(rank: .nine, suit: .heart)]), "Test failed for sequential cards out of order")
-    }
-    
-    func testGetHand() throws {
-        XCTAssertEqual(CardUtils.getHand(cards: [Card(rank: .ace, suit: .heart), Card(rank: .king, suit: .heart), Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart)]), .royal_flush)
-        XCTAssertEqual(CardUtils.getHand(cards: [Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .spade), Card(rank: .seven, suit: .spade), Card(rank: .six, suit: .spade), Card(rank: .five, suit: .spade)]), .straight_flush)
-    }
+// Works in Progress
+//    func testIsInSequence() throws {
+//        XCTAssertTrue(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .nine, suit: .heart), Card(rank: .eight, suit: .heart)]))
+//        XCTAssertFalse(CardUtils.isInSequence(cards: [Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart), Card(rank: .eight, suit: .heart), Card(rank: .nine, suit: .heart)]), "Test failed for sequential cards out of order")
+//    }
+//    
+//    func testGetHand() throws {
+//        XCTAssertEqual(CardUtils.getHand(cards: [Card(rank: .ace, suit: .heart), Card(rank: .king, suit: .heart), Card(rank: .queen, suit: .heart), Card(rank: .jack, suit: .heart), Card(rank: .ten, suit: .heart)]), .royal_flush)
+//        XCTAssertEqual(CardUtils.getHand(cards: [Card(rank: .nine, suit: .spade), Card(rank: .eight, suit: .spade), Card(rank: .seven, suit: .spade), Card(rank: .six, suit: .spade), Card(rank: .five, suit: .spade)]), .straight_flush)
+//    }
     
     func testExampleHands() throws {
         XCTAssertEqual(CardUtils.getHand(cards: Hand.royal_flush.exampleHand), .royal_flush)

@@ -41,6 +41,17 @@
                ReferencedContainer = "container:Poker Face.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA3D67EE2D7C0E4F002837A0"
+               BuildableName = "Poker FaceUITests.xctest"
+               BlueprintName = "Poker FaceUITests"
+               ReferencedContainer = "container:Poker Face.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

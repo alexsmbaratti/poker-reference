@@ -87,6 +87,7 @@ struct HowToView: View {
 #endif
                                 .cornerRadius(20)
                         }
+                        .accessibilityIdentifier("showDeferredStepsButton")
                     }
                     Spacer()
                 }
@@ -309,6 +310,7 @@ struct StepView: View {
 #endif
                                 .cornerRadius(20)
                         }
+                        .accessibilityIdentifier("quickReferenceButton")
 #if !os(iOS)
                         .disabled(openWindows.contains("quick-reference"))
 #endif

@@ -41,7 +41,7 @@ struct ContentView: View {
                     showDisclaimer = true
                 }
             }
-            .navigationTitle("Poker Reference")
+            .navigationTitle("Cardiac King")
             .toolbar {
                 ToolbarItem(placement: sizeClass == .compact ? .topBarLeading : .topBarTrailing, content: {
                     Button(action: {
